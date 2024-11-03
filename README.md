@@ -12,8 +12,6 @@ It is an experimental language created for educational purposes, emphasizing sim
 
 ## File Structure
 - `grammar/`: Directory containing detailed Mylang grammar definitions.
-  - `mylang_grammar.md`: Main document outlining Mylang's syntax, keywords, and rule sets.
-  - `examples/`: Sample Mylang code snippets demonstrating the language syntax.
 
 ## Contributing
 We welcome contributions to enhance Mylang's grammar! Here’s how you can help:
