@@ -1,11 +1,12 @@
-Not implemented yet :)
+let,
 
 int,  int8,  int16,  int32,  int64
 uint, uint8, uint16, uint32, uint64,
 float, float32, float64
 
 char ('a'), string ("hfdg"), list ([1,2,3,4]), tuple (this is tuple- (1,2,3,4) or (1,) with one element),
-dict (dictionary or map- {} or {"a": 23}), any (interface{} in go, any in ts)
+dict (dictionary or map- {} or {"a": 23}), any (interface{} in go, any in ts),
+set (python's set)
 
 true, false, null,
 
@@ -14,7 +15,7 @@ break, continue, switch, case, default, in, interface, defer, fallthrough,
 
 try, except, throw
 
-class, is, return, enum
+class, extends, implement, is, return, enum
 
 and, or, fn, delete (deallocated dynamic memory), new, not, yield
 
