@@ -1,5 +1,3 @@
-Not implemented yet :)
-
 fn PrintLine() {
     print("Hello World!")
 }

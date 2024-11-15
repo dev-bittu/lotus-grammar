@@ -2,13 +2,13 @@ fn PrintHelloWorld() {
     print("Hello World!")
 }
 
-fn PrintAllElementOfList(list lst) {
+fn PrintAllElementOfList(lst list) {
     for (element in lst) {
         print(element)
     }
 }
 
-fn PrintAllElementOfDict(dict dct) {
+fn PrintAllElementOfDict(dct dict) {
     for (element in dct) {
         print(element, dct[element])
     }
@@ -19,7 +19,7 @@ fn PrintAllElementOfDict(dict dct) {
     }
 
     lets say we have a dict:
-    dict mydict = {"name": "bittu", "myfavchar": 'b', "favnum": 7}
+    let mydict dict = {"name": "bittu", "myfavchar": 'b', "favnum": 7}
     then output of mydict.items() it this:
     (("name", "bittu"), ("myfavchar", 'b'), ("favnum", 7))
     while iterating if we use one variable to hold the element then element will look like:

@@ -1,5 +1,5 @@
 anonymous fn :)
 
-fn (ParameterType parameter) ReturnType {
+fn (parameter ParameterType) ReturnType {
     ...
 }

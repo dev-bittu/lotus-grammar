@@ -6,16 +6,16 @@ __varName -> private variable
 
 class MyClass {
     // public variable name
-    string name = ""
+    let name string = ""
 
     // protected variable 
-    string _some_protected_var = ""
+    let _some_protected_var string = ""
 
     // private variable name
-    string __another_name = ""
+    let __another_name string = ""
 
     // static variable
-    static int count = 1
+    static count int = 1
 
     // constructor
     fn __init__(string name) {
@@ -23,11 +23,11 @@ class MyClass {
     }
 }
 
-fn (MyClass mcls) ShowInfo() {
+fn (mcls MyClass) ShowInfo() {
     println(this.name)
 }
 
-fn (MyClass& mcls) ChangeVariableValue(string new_val) {
+fn (mcls &MyClass) ChangeVariableValue(string new_val) {
     this.__another_name = new_val
 }
 
