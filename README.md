@@ -4,6 +4,15 @@ This repository defines the grammar for **Mylang**, a beginner-friendly, educati
 ## Overview
 It is an experimental language created for educational purposes, emphasizing simplicity and readability. The grammar definitions in this repository outline the structure, syntax, and basic rules of Mylang, making it easier to develop language tools like parsers and interpreters.
 
+
+mylang -> compiles to intermediate form (like java class files) -> run on mylang virtual machine (mvm)
+> This feature is required for:
+> - gc
+> - convert dynamic to static type
+> - improve performance
+> - improve compile time 
+> - cross plateform
+
 ### Features
 - **Simple Syntax**: Designed with new learners in mind, Mylang has an intuitive syntax inspired by popular languages.
 - **Grammar Focus**: A detailed grammar definition helps lay the groundwork for exploring language implementation concepts.
