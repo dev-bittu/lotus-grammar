@@ -1,5 +1,5 @@
 
-// break is used by default if you want to fallthrough then use keyword: fallthrough
+// break is used by default if you want to fallthrough then use keyword fallthrough
 switch ("monday") {
     case "moday":
         print("its monday")

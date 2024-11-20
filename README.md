@@ -14,13 +14,13 @@ mylang -> compiles to intermediate form (like java class files) -> run on mylang
 > - cross plateform
 
 ### Features
-- **Simple Syntax**: Designed with new learners in mind, Mylang has an intuitive syntax inspired by popular languages.
-- **Grammar Focus**: A detailed grammar definition helps lay the groundwork for exploring language implementation concepts.
-- **Educational Purpose**: Created as a resource for those interested in learning about programming languages and compilers.
+- **Simple Syntax** Designed with new learners in mind, Mylang has an intuitive syntax inspired by popular languages.
+- **Grammar Focus** A detailed grammar definition helps lay the groundwork for exploring language implementation concepts.
+- **Educational Purpose** Created as a resource for those interested in learning about programming languages and compilers.
 
 
 ## File Structure
-- `grammar/`: Directory containing detailed Mylang grammar definitions.
+- `grammar/` Directory containing detailed Mylang grammar definitions.
 
 ## Contributing
 We welcome contributions to enhance Mylang's grammar! Here’s how you can help:

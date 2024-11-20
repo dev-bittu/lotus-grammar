@@ -1,12 +1,11 @@
 let,
 
-int,  int8,  int16,  int32,  int64
-uint, uint8, uint16, uint32, uint64,
+i8, i16, i32, i64, i128
+u8, u16, u32, u64, u128
 float, float32, float64
 
-char ('a'), string ("hfdg"), list ([1,2,3,4]), tuple (this is tuple- (1,2,3,4) or (1,) with one element),
-dict (dictionary or map- {} or {"a": 23}), any (interface{} in go, any in ts),
-set (python's set)
+char, str, list, tuple, array,
+dict, map, set, any
 
 true, false, null,
 

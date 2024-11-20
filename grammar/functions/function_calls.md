@@ -19,7 +19,7 @@ fn PrintAllElementOfDict(dct dict) {
     }
 
     lets say we have a dict:
-    let mydict dict = {"name": "bittu", "myfavchar": 'b', "favnum": 7}
+    let mydict dict = {"name" "bittu", "myfavchar" 'b', "favnum" 7}
     then output of mydict.items() it this:
     (("name", "bittu"), ("myfavchar", 'b'), ("favnum", 7))
     while iterating if we use one variable to hold the element then element will look like:
