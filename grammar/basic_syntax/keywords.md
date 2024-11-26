@@ -1,23 +1,26 @@
-let,
+let, const, static
 
 i8, i16, i32, i64, i128
 u8, u16, u32, u64, u128
-float, float32, float64
+f32, f64, f128,
 
-char, str, list, tuple, array,
-dict, map, set, any
+bool, any,
+
+char, str, list, tuple, array, dict, set,
 
 true, false, null,
 
-if, else, elif, for, while (maybe i use for as while like golang), 
-break, continue, switch, case, default, in, interface, defer, fallthrough, 
+if, else, elif, switch, case, default, fallthrough,
+and, or, not, is
+for, while, 
+break, continue, in, 
 
-try, except, throw
+try, catch, throw
 
-class, extends, implement, is, return, enum
+def, return, defer,
 
-and, or, fn, delete (deallocated dynamic memory), new, not, yield
+class, extends, impl, enum, interface,
 
-from, import, as
+def, delete, new, yield
 
-const, static, 
+import, as,
