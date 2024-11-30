@@ -1,6 +1,6 @@
-### Integer Data Types in *mylang*  
+### Integer Data Types in *b2*  
 
-*mylang* provides a variety of integer data types for different use cases, with both **signed** and **unsigned** variants.  
+*b2* provides a variety of integer data types for different use cases, with both **signed** and **unsigned** variants.  
 
 ---
 
@@ -35,34 +35,34 @@ Unsigned integers can hold only positive values, which allows them to have a lar
 ### Examples  
 
 1. **Signed Integer Example**  
-```mylang
+```b2
 x := i32(-12345)  // A signed 32-bit integer
 print(x)          // Outputs -12345
 ```
 
 2. **Unsigned Integer Example**  
-```mylang
+```b2
 y := u16(54321)   // An unsigned 16-bit integer
 print(y)          // Outputs 54321
 ```
 
 3. **Default Integer Type**  
-By default, *mylang* assigns the `i64` data type to integer literals if no type is specified  
-```mylang
+By default, *b2* assigns the `i64` data type to integer literals if no type is specified  
+```b2
 z := 123456       // Automatically inferred as i64
 print(z)          // Outputs 123456
 ```
 
 4. **Explicit Declaration**  
 To ensure a specific data type, use the type constructor or type declaration syntax  
-```mylang
+```b2
 a := i8(127)      // Explicitly declare as i8
 print(a)          // Outputs 127
 ```
 
 5. **Invalid Assignments**  
 Attempting to assign a value outside the range of a type will cause a compilation error  
-```mylang
+```b2
 b := i8(200)      // Error 200 exceeds the range of i8 (-128 to 127)
 ```
 
@@ -89,5 +89,5 @@ b := i8(200)      // Error 200 exceeds the range of i8 (-128 to 127)
 
 - Signed integers (`i8`, `i16`, etc.) are suitable for data with both positive and negative values.  
 - Unsigned integers (`u8`, `u16`, etc.) provide larger positive ranges but do not support negative values.  
-- The default type for integers in *mylang* is `i64`.  
+- The default type for integers in *b2* is `i64`.  
 - Always ensure that your values fall within the range of the specified data type to avoid errors.

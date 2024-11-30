@@ -1,11 +1,9 @@
 ### **Modules in MyLang**
-
 Modules in MyLang provide a way to structure code into reusable components. They allow developers to organize their programs into packages and manage dependencies efficiently, akin to Node.js.
 
 ---
 
 ### **Key Concepts**
-
 1. **Packages**: A package is a collection of related modules grouped together in a directory.  
 2. **Modules**: Individual files containing MyLang code, such as functions, classes, or constants.  
 3. **Imports**: Bring functions, classes, or variables from one module into another.  
@@ -15,39 +13,38 @@ Modules in MyLang provide a way to structure code into reusable components. They
 ---
 
 ### **File Structure**
-
 ```plaintext
-main.mylangext
+main.b2
 package.json
 package-lock.json
-mylang_moduels/
+b2_moduels/
     ...
 pkg/
     myclass/
-        myclass.mylangext
-        static_funs.mylangtext
+        myclass.b2
+        static_funs.b2text
     ...
 ```
 
 #### **Explanation**
-- `main.mylangext`: Entry point of the program.
+- `main.b2`: Entry point of the program.
 - `package.json`: Contains metadata and dependency information about the project.
 - `package-lock.json`: Tracks specific dependency versions.
-- `mylang_modules/`: Contains external libraries (like Node.js `node_modules`).
+- `b2_modules/`: Contains external libraries (like Node.js `node_modules`).
 - `pkg/`: Holds custom modules and packages for your project.
 
 ---
 
 ### **Example Module Structure**
 
-#### `main.mylangext`  
+#### `main.b2`  
 The entry point of the program.
 
-```mylang
-package main
+```b2
+pkg main
 
 import (
-    "github.com/dev-bittu/mylangtest/pkg/myclass" as mycls
+    "github.com/dev-bittu/b2test/pkg/myclass" as mycls
 )
 
 def main() {
@@ -60,11 +57,10 @@ def main() {
 
 ---
 
-#### `myclass.mylangext`  
+#### `myclass.b2`  
 Defines a class and its associated static variables.
-
-```mylang
-package myclass
+```b2
+pkg myclass
 
 class MyClass {
     static count = 0
@@ -77,11 +73,11 @@ def (mcl MyClass) __init__() {
 
 ---
 
-#### `static_funs.mylangext`  
+#### `static_funs.b2`  
 Contains additional static functions for the `MyClass` module.
 
-```mylang
-package myclass
+```b2
+pkg myclass
 
 def MyClass.increase_count() {
     MyClass.count += 1  // Increment the static count
@@ -95,14 +91,14 @@ Defines metadata and dependencies for the project.
 
 ```json
 {
-    "name": "mylangtest",
+    "name": "b2test",
     "version": "1.0.0",
     "description": "A demo MyLang project",
-    "main": "main.mylangext",
+    "main": "main.b2",
     "dependencies": {
         "some-dependency": "^1.0.0"
     },
-    "project": "github.com/dev-bittu/mylangtest"
+    "project": "github.com/dev-bittu/b2test"
 }
 ```
 
@@ -113,7 +109,7 @@ Tracks exact dependency versions (similar to Node.js).
 
 ```json
 {
-    "name": "mylangtest",
+    "name": "b2test",
     "lockfileVersion": 1,
     "dependencies": {
         "some-dependency": {
@@ -133,16 +129,16 @@ Tracks exact dependency versions (similar to Node.js).
 - You can alias a module for simpler access using `as`.
 
 #### **Syntax**
-```mylang
+```b2
 import (
     "module/path" as alias
 )
 ```
 
 #### **Example**
-```mylang
+```b2
 import (
-    "github.com/dev-bittu/mylangtest/pkg/myclass" as mycls
+    "github.com/dev-bittu/b2test/pkg/myclass" as mycls
 )
 
 def main() {
@@ -168,7 +164,7 @@ def main() {
 1. **Use `package` Statement**: Clearly define the package for every file to avoid ambiguity.
 2. **Organize Code Logically**: Use directories like `pkg/` for your project-specific packages.
 3. **Avoid Circular Imports**: Plan dependencies to prevent cyclic module references.
-4. **Use `mylang_modules` for External Libraries**: Manage third-party packages in the `mylang_modules` directory.
+4. **Use `b2_modules` for External Libraries**: Manage third-party packages in the `b2_modules` directory.
 5. **Modularize Code**: Split large modules into smaller, reusable components.
 
 ---

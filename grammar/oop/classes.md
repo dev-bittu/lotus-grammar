@@ -7,25 +7,25 @@ In MyLang, classes serve as templates for creating objects, encapsulating data (
 ### **Class Variables**
 1. **Public Variables:**  
 Accessible from anywhere. Defined without a prefix.
-```mylang
+```b2
 let name string = ""
 ```
 
 2. **Protected Variables:**  
 Accessible only within the class and subclasses. Prefixed with `_`.
-```mylang
+```b2
 let _protected_var string = ""
 ```
 
 3. **Private Variables:**  
 Accessible only within the class. Prefixed with `__`.
-```mylang
+```b2
 let __private_var string = ""
 ```
 
 4. **Static Variables:**  
 Shared among all instances. Defined using the `static` keyword.
-```mylang
+```b2
 static count int = 0
 ```
 
@@ -35,7 +35,7 @@ static count int = 0
 1. **Constructor (`__init__`):**  
 Initializes an object’s attributes.  
 Declared outside the class body.  
-```mylang
+```b2
 def (mcls &MyClass) __init__(name str) {
     mcls.name = name
     mcls.count += 1  // or MyClass.count += 1
@@ -45,7 +45,7 @@ def (mcls &MyClass) __init__(name str) {
 2. **Destructor (`__dest__`):**  
 Called when an object is deleted or goes out of scope.  
 Declared outside the class body.  
-```mylang
+```b2
 def (mcls &MyClass) __dest__() {
     print(mcls.name + " is being destroyed")
 }
@@ -55,7 +55,7 @@ def (mcls &MyClass) __dest__() {
 
 ### **Methods**
 1. **Instance Methods:**
-```mylang
+```b2
 def (mcls MyClass) ShowInfo() {
     print("Name: " + mcls.name)
 }
@@ -63,14 +63,14 @@ def (mcls MyClass) ShowInfo() {
 
 2. **Mutable Methods (Reference):**  
 Use a reference (`&`) to modify the object’s properties.
-```mylang
+```b2
 def (mcls &MyClass) ChangePrivateVar(new_val str) {
     mcls.__private_var = new_val
 }
 ```
 
 3. **Static Methods:**  
-```mylang
+```b2
 def MyClass.StaticMethod() {
     print("Static count: " + MyClass.count.toString())
 }
@@ -87,7 +87,7 @@ Supported operators include:
 - `__lt__` for `<`
 
 #### Example:
-```mylang
+```b2
 def (mcls MyClass) __add__(other MyClass) MyClass {
     let new_name string = mcls.name + other.name
     return MyClass(new_name)
@@ -99,7 +99,7 @@ def (mcls MyClass) __add__(other MyClass) MyClass {
 ### **String Representation**
 1. **`__str__` Method:**  
 Returns a human-readable string. Called by `print(obj)`.  
-```mylang
+```b2
 def (mcls MyClass) __str__() string {
     return "MyClass(name=" + mcls.name + ")"
 }
@@ -107,7 +107,7 @@ def (mcls MyClass) __str__() string {
 
 2. **`__repr__` Method:**  
 Returns a developer-friendly string. Called by `repr(obj)`.  
-```mylang
+```b2
 def (mcls MyClass) __repr__() string {
     return "MyClass('" + mcls.name + "')"
 }
@@ -119,7 +119,7 @@ def (mcls MyClass) __repr__() string {
 Methods with the same name but different parameter types or counts can coexist.
 
 #### Example:
-```mylang
+```b2
 def (mcls MyClass) greet() {
     print("Hello!")
 }
@@ -132,7 +132,7 @@ def (mcls MyClass) greet(name str) {
 ---
 
 ### **Sample Class Implementation**
-```mylang
+```b2
 class MyClass {
     let name string  // str default value: ""
     let _protected_var string  // str default value: ""

@@ -1,34 +1,37 @@
-# Mylang Grammar
-This repository defines the grammar for **Mylang**, a beginner-friendly, educational programming language designed to help users explore compiler design and language syntax. This grammar serves as the foundation for Mylang, enabling future development of parsers, compilers, and interpreters.
+# B2 Grammar
+This repository defines the grammar for **B2**, a compiled programming language designed to combine the best features of various languages. B2 aims to provide:
+
+- Simple syntax similar to Python, making it easy to write and read.
+- Performance optimized like C/C++ for speed and efficiency.
+- Static typing like Go, providing safety and performance benefits at compile-time.
+- A robust compiler experience like Rust, ensuring great optimization and error detection.
+
+B2 compiles to an intermediate form (similar to Java class files) that runs on the **B2 Virtual Machine (MVM)**. This approach offers:
+
+- **Garbage Collection** for memory management.
+- **Dynamic-to-Static Type Conversion** to improve performance and ensure type safety.
+- **Cross-Platform Support**, enabling B2 applications to run on various platforms.
+- **Improved Compilation Time** thanks to the optimized intermediate representation.
 
 ## Overview
-It is an experimental language created for educational purposes, emphasizing simplicity and readability. The grammar definitions in this repository outline the structure, syntax, and basic rules of Mylang, making it easier to develop language tools like parsers and interpreters.
-
-
-mylang -> compiles to intermediate form (like java class files) -> run on mylang virtual machine (mvm)
-> This feature is required for:
-> - gc
-> - convert dynamic to static type
-> - improve performance
-> - improve compile time 
-> - cross plateform
+B2 is designed with both beginner users and advanced developers in mind. It is an experimental language that emphasizes simplicity, ease of use, and performance. The grammar definitions in this repository serve as the foundation for B2, allowing future development of parsers, compilers, and interpreters.
 
 ### Features
-- **Simple Syntax** Designed with new learners in mind, Mylang has an intuitive syntax inspired by popular languages.
-- **Grammar Focus** A detailed grammar definition helps lay the groundwork for exploring language implementation concepts.
-- **Educational Purpose** Created as a resource for those interested in learning about programming languages and compilers.
+- **Simple Syntax**: B2 is designed to be easy to write and read, inspired by languages like Python but with the power of compiled languages.
+- **Faster Performance**: Offers C/C++-like performance, thanks to a compiled execution model.
+- **Static Typing**: Static types are enforced at compile-time for reliability and speed, similar to Go.
+- **Good Compiler**: B2 features a compiler designed for error detection, optimization, and performance improvements, inspired by Rust's tooling.
 
 
 ## File Structure
-- `grammar/` Directory containing detailed Mylang grammar definitions.
+- `grammar/` - Directory containing detailed B2 grammar definitions.
 
 ## Contributing
-We welcome contributions to enhance Mylang's grammar! Here’s how you can help:
+We welcome contributions to enhance B2's grammar! Here’s how you can help:
 1. **Fork the Repository**
 2. **Create a Branch** for your feature or bug fix.
 3. **Commit Your Changes** with descriptive messages.
 4. **Open a Pull Request** to merge your changes.
-
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

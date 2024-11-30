@@ -1,12 +1,12 @@
-### `switch`/`case` in **mylang**
+### `switch`/`case` in **b2**
 
-The `switch`/`case` statement in **mylang** is a control flow structure used to execute one out of several possible blocks of code, depending on the value of a given expression. It allows you to compare a variable or expression with different cases, making it more efficient than using multiple `if-else` statements when dealing with many possible conditions.
+The `switch`/`case` statement in **b2** is a control flow structure used to execute one out of several possible blocks of code, depending on the value of a given expression. It allows you to compare a variable or expression with different cases, making it more efficient than using multiple `if-else` statements when dealing with many possible conditions.
 
 The `switch`/`case` structure is typically used to handle multiple conditions in a concise and readable way.
 
 ### Basic Syntax
 
-```mylang
+```b2
 switch expression {
     case value1:
         // Code to execute if expression equals value1
@@ -24,7 +24,7 @@ switch expression {
 
 ### Example 1: Basic `switch`/`case`
 
-```mylang
+```b2
 day := 3
 switch day {
     case 1:
@@ -54,7 +54,7 @@ Wednesday
 
 ### Example 2: `switch`/`case` with String Matching
 
-```mylang
+```b2
 fruit := "banana"
 switch fruit {
     case "apple":
@@ -82,7 +82,7 @@ Bananas are rich in potassium.
 
 You can group multiple `case` values together to execute the same block of code for different conditions.
 
-```mylang
+```b2
 month := 7
 switch month {
     case 1, 2, 3:
@@ -111,7 +111,7 @@ Third quarter of the year.
 
 The `default` case is optional. If you don't need a fallback, you can omit it.
 
-```mylang
+```b2
 color := "blue"
 switch color {
     case "red":
@@ -136,7 +136,7 @@ Color is blue
 
 You can also use expressions in `switch`/`case` to evaluate more complex conditions.
 
-```mylang
+```b2
 x := 10
 switch x % 2 {
     case 0:
@@ -162,7 +162,7 @@ The **`fallthrough`** keyword is used to allow execution to continue into the ne
 
 ### Basic Syntax with Fallthrough:
 
-```mylang
+```b2
 switch expression {
     case value1:
         // Code to execute if expression equals value1
@@ -176,7 +176,7 @@ switch expression {
 
 ### Example 1: Basic Switch with Fallthrough
 
-```mylang
+```b2
 day := 3
 switch day {
     case 1:
@@ -213,12 +213,12 @@ Thursday
 
 Let’s also use an example with a **custom enum-like** structure, which could be useful for more structured case handling.
 
-In **mylang**, there isn’t a direct `enum` type, but we can simulate it by using constants or a `struct`. Here’s an example using string constants to mimic enums:
+In **b2**, there isn’t a direct `enum` type, but we can simulate it by using constants or a `struct`. Here’s an example using string constants to mimic enums:
 
-```mylang
+```b2
 // Defining day enum
 enum day {
-    MONDAY = 1,
+    MONDAY,
     TUESDAY,
     WEDNESDAY,
     THURSDAY,

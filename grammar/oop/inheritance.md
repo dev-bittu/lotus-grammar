@@ -11,7 +11,7 @@ Inheritance allows a class (child) to acquire properties and methods of another 
 A class can inherit from another class to reuse its properties and methods. The child class can also override methods from the parent class.
 
 #### **Syntax**
-```mylang
+```b2
 class Parent {
     let name string = "Parent"
 }
@@ -24,7 +24,7 @@ class Child extends Parent {
 ---
 
 #### **Example**
-```mylang
+```b2
 class Parent {
     let name string = "Parent"
 
@@ -49,7 +49,7 @@ def (c Child) greet() {
 ```
 
 #### **Usage**
-```mylang
+```b2
 let parent = Parent()
 parent.greet() // Output: Hello from Parent
 
@@ -64,7 +64,7 @@ child.showChildName() // Output: Child name: Child
 Interfaces define a set of methods that a class must implement. A class can implement multiple interfaces using the `impl` keyword.
 
 #### **Syntax**
-```mylang
+```b2
 interface Animal {
     def sound() str
     def move() str
@@ -76,7 +76,7 @@ class Dog impl Animal {
 ```
 
 #### **Example**
-```mylang
+```b2
 interface Animal {
     def sound() str
     def move() str
@@ -97,7 +97,7 @@ def (d Dog) move() str {
 ```
 
 #### **Usage**
-```mylang
+```b2
 let dog Animal = Dog()
 print(dog.sound()) // Output: Bark
 print(dog.move())  // Output: Run
@@ -109,7 +109,7 @@ print(dog.move())  // Output: Run
 MyLang allows a class to extend a base class and implement multiple interfaces simultaneously.
 
 #### **Example**
-```mylang
+```b2
 class Vehicle {
     let type string = "Generic Vehicle"
 }
@@ -142,7 +142,7 @@ def (c Car) getType() str {
 ```
 
 #### **Usage**
-```mylang
+```b2
 let car = Car()
 print(car.refuel()) // Output: Refueling the car!
 print(car.charge()) // Output: Charging the car!

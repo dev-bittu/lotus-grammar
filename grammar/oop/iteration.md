@@ -19,7 +19,7 @@ In MyLang, `__iter__` and `__next__` are special methods used to create iterable
 
 ### **Example: Creating an Iterable Class**
 
-```mylang
+```b2
 class MyNumbers {
     let start i32 = 0
     let end i32 = 10
@@ -48,7 +48,7 @@ def (mynum &MyNumbers) __next__() int {
 ### **Using the Iterable**
 The object can now be used in a `for` loop or manually iterated with `__next__`:
 
-```mylang
+```b2
 let nums = MyNumbers()
 
 // Using the object in a for loop
@@ -74,7 +74,7 @@ try {
 You can customize the range, step, or sequence by modifying the logic in `__iter__` and `__next__`.
 
 #### **Example: Custom Step Size**
-```mylang
+```b2
 class MyNumbers {
     let start = 0
     let end = 10

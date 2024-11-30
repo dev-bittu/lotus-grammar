@@ -1,5 +1,5 @@
-### **Operators in *mylang***
-Operators are essential components in any programming language, used to perform operations on variables and values. *mylang* supports a wide range of operators, including the ones found in Python, with a few additional ones for optimized programming. Below is a breakdown of the different types of operators available in *mylang*.
+### **Operators in *b2***
+Operators are essential components in any programming language, used to perform operations on variables and values. *b2* supports a wide range of operators, including the ones found in Python, with a few additional ones for optimized programming. Below is a breakdown of the different types of operators available in *b2*.
 
 ---
 
@@ -64,7 +64,7 @@ The increment (`i++`) and decrement (`--i`) operators are used to add or subtrac
 | `i++`    | Post-increment         | `i++` (value of `i` is increased by 1 after the expression) |
 | `++i`    | Pre-increment          | `++i` (value of `i` is increased by 1 before the expression) |
 
-*Note:* The increment and decrement operators are part of the *mylang* syntax for convenience and efficiency, similar to languages like C and Java.
+*Note:* The increment and decrement operators are part of the *b2* syntax for convenience and efficiency, similar to languages like C and Java.
 
 ---
 
@@ -104,7 +104,7 @@ Identity operators are used to check if two variables point to the same object i
 
 ### **Example Usage of All Operators**
 
-```mylang
+```b2
 // Arithmetic Operators
 x := 10 + 5  // 15
 y := 10 - 5  // 5
@@ -148,4 +148,4 @@ print(x is y)  // True
 
 ---
 
-This summary covers the most commonly used operators in *mylang*. With the flexibility provided by these operators, you can perform a wide range of operations on variables and values for more efficient and concise code.
+This summary covers the most commonly used operators in *b2*. With the flexibility provided by these operators, you can perform a wide range of operations on variables and values for more efficient and concise code.

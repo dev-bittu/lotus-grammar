@@ -1,6 +1,7 @@
 const var := "Bittu"
 OR
 const var string = "Bittu"
-OR 
-const let var string
+
+// ERROR: const not initialized on declration
+const var string
 var = "Bittu"

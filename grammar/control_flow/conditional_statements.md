@@ -1,20 +1,20 @@
-### `if`, `else`, and `elif` in **mylang**
+### `if`, `else`, and `elif` in **b2**
 
-In **mylang**, the `if`, `else`, and `elif` statements are used to make decisions based on conditions. The blocks of code are enclosed in curly braces `{}` to define their scope, and conditions are followed by the block of code inside curly braces.
+In **b2**, the `if`, `else`, and `elif` statements are used to make decisions based on conditions. The blocks of code are enclosed in curly braces `{}` to define their scope, and conditions are followed by the block of code inside curly braces.
 
 ### `if` Statement
 
 The `if` statement checks whether a condition is `true`. If it is, the code inside the curly braces is executed.
 
 #### Syntax:
-```mylang
+```b2
 if condition {
     // Code to execute if the condition is true
 }
 ```
 
 #### Example:
-```mylang
+```b2
 age := 18
 if age >= 18 {
     print("You are an adult.")
@@ -29,7 +29,7 @@ if age >= 18 {
 The `else` statement provides an alternative block of code that is executed if the `if` condition is `false`. The `else` block must come after the `if` block.
 
 #### Syntax:
-```mylang
+```b2
 if condition {
     // Code to execute if the condition is true
 } else {
@@ -38,7 +38,7 @@ if condition {
 ```
 
 #### Example:
-```mylang
+```b2
 age := 16
 if age >= 18 {
     print("You are an adult.")
@@ -55,7 +55,7 @@ if age >= 18 {
 The `elif` (short for "else if") statement checks multiple conditions. If the first `if` condition is `false`, the program moves on to the `elif` condition, and so on. The first `true` condition will execute its associated block. If none of the conditions are `true`, the `else` block will execute.
 
 #### Syntax:
-```mylang
+```b2
 if condition1 {
     // Code to execute if condition1 is true
 } elif condition2 {
@@ -66,7 +66,7 @@ if condition1 {
 ```
 
 #### Example:
-```mylang
+```b2
 age := 25
 if age < 13 {
     print("You are a child.")
@@ -85,7 +85,7 @@ if age < 13 {
 You can combine `if`, `elif`, and `else` to handle more complex decision-making scenarios.
 
 #### Example:
-```mylang
+```b2
 temperature := 30
 if temperature < 10 {
     print("It's cold.")
@@ -106,7 +106,7 @@ if temperature < 10 {
 You can nest `if` statements inside other `if` statements to create more complex logic.
 
 #### Example:
-```mylang
+```b2
 age := 25
 has_id := true
 if age >= 18 {
@@ -130,4 +130,4 @@ if age >= 18 {
 - The blocks of code are enclosed in curly braces `{}` to define the scope of the condition and the actions.
 - Logical operators like `and`, `or`, and `not` can be used in conditions to combine multiple expressions.
 
-This is the correct **mylang** syntax for conditional statements!
+This is the correct **b2** syntax for conditional statements!

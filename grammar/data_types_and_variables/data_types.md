@@ -1,6 +1,6 @@
-### Built-in Data Types in mylang  
+### Built-in Data Types in b2  
 
-*mylang* provides a variety of built-in data types, categorized as follows:
+*b2* provides a variety of built-in data types, categorized as follows:
 
 ---
 
@@ -42,7 +42,7 @@
 ### Getting the Data Type  
 
 To check a variable's type, use the `type()` function  
-```mylang
+```b2
 x := 5
 print(type(x))  // Outputs i64
 ```
@@ -51,9 +51,9 @@ print(type(x))  // Outputs i64
 
 ### Setting the Data Type  
 
-By default, *mylang* infers the data type during assignment  
+By default, *b2* infers the data type during assignment  
 
-```mylang
+```b2
 x := "Hello World"   // str
 x := 20              // i64
 x := 20.5            // f32
@@ -74,7 +74,7 @@ x := null           // NoneType
 
 Use type constructors or explicit type declarations for precision  
 
-```mylang
+```b2
 x := str("Hello World")   // Explicitly set as str
 y := i64(1234)            // Explicitly set as i64
 z := f32(3.14)            // Explicitly set as f32
@@ -90,4 +90,4 @@ c := map<str, str>(name="bittu", age="36")  // Explicitly declare a map with str
 - **Complex Numbers** Implementation pending; will handle real and imaginary parts.  
 - **Array Type** Requires type and size to be specified, followed by the elements.  
 - **Map Type** Enables key-value pairs with specified key and value types, similar to dictionaries in Python.  
-- Strong typing in *mylang* ensures consistency and improves code readability.
+- Strong typing in *b2* ensures consistency and improves code readability.

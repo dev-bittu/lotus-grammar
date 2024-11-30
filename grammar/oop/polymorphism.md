@@ -21,7 +21,7 @@ Polymorphism is one of the key principles of Object-Oriented Programming (OOP). 
 MyLang supports **method overloading** by defining multiple versions of a function with the same name but different parameter counts or types.
 
 #### **Example: Method Overloading**
-```mylang
+```b2
 def CalculateArea(length i32, width i32) i32 {
     return length * width
 }
@@ -45,7 +45,7 @@ print(circle_area)  // Output: 176.625
 MyLang supports **method overriding** where a subclass can redefine methods from its parent class to provide a specialized behavior.
 
 #### **Example: Method Overriding**
-```mylang
+```b2
 class Animal {
     def Speak() str {
         return "Some generic animal sound"
@@ -83,7 +83,7 @@ for animal in animals {
 Polymorphism in MyLang also works through **interfaces**, where different classes implement the same interface but provide different behaviors.
 
 #### **Example: Polymorphism with Interfaces**
-```mylang
+```b2
 interface Shape {
     def Area() f32
 }
@@ -123,7 +123,7 @@ for shape in shapes {
 You can use polymorphism in functions by designing them to work with parent classes or interfaces.
 
 #### **Example: Function Accepting Multiple Types**
-```mylang
+```b2
 def DescribeAnimal(animal Animal) {
     print(animal.Speak())
 }
