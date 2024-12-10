@@ -1,13 +1,13 @@
-# Namespaces in b2
-Namespaces in **b2** are designed to provide clear, modular, and collision-free code organization. They help group related entities (variables, functions, classes, etc.) and facilitate their usage in larger projects. b2's namespace mechanism is intuitive, aligning with the goal of keeping the language simple and beginner-friendly.
+# Namespaces in lotus
+Namespaces in **lotus** are designed to provide clear, modular, and collision-free code organization. They help group related entities (variables, functions, classes, etc.) and facilitate their usage in larger projects. lotus's namespace mechanism is intuitive, aligning with the goal of keeping the language simple and beginner-friendly.
 
 ---
 
 ## **What Are Namespaces?**
-A **namespace** is a logical grouping of code entities (functions, classes, variables, etc.) that helps avoid naming conflicts and organizes code more efficiently. In b2, namespaces are typically defined at the pkg level, where each pkg automatically acts as a namespace.
+A **namespace** is a logical grouping of code entities (functions, classes, variables, etc.) that helps avoid naming conflicts and organizes code more efficiently. In lotus, namespaces are typically defined at the pkg level, where each pkg automatically acts as a namespace.
 
 For example:  
-```b2
+```lotus
 pkg utils
 
 def add(a i32, b i32) i32 {
@@ -19,9 +19,9 @@ Here, `utils` is the namespace. To access `add` from another pkg, you’ll refer
 ---
 
 ## **Defining a Namespace**
-Namespaces in b2 are defined using the `pkg` keyword, which specifies the pkg name at the top of the file.  
+Namespaces in lotus are defined using the `pkg` keyword, which specifies the pkg name at the top of the file.  
 - Example:  
-  ```b2
+  ```lotus
   pkg math
 
   def multiply(a i32, b i32) i32 {
@@ -32,14 +32,14 @@ Namespaces in b2 are defined using the `pkg` keyword, which specifies the pkg na
 ---
 
 ## **Using a Namespace**
-To use a namespace, you import the corresponding pkg into your code. b2 supports importing specific items or entire namespaces for convenience.
+To use a namespace, you import the corresponding pkg into your code. lotus supports importing specific items or entire namespaces for convenience.
 
 ### **Importing a pkg**
 Use the `import` keyword to bring a namespace into your code:
-```b2
+```lotus
 pkg main
 
-import "github.com/dev-bittu/b2lib/math"
+import "github.com/dev-bittu/lotuslib/math"
 
 def main() {
     let result = math.multiply(5, 3)
@@ -49,10 +49,10 @@ def main() {
 
 ### **Alias a Namespace**
 You can use an alias to simplify long namespace paths:
-```b2
+```lotus
 pkg main
 
-import "github.com/dev-bittu/b2lib/math" as m
+import "github.com/dev-bittu/lotuslib/math" as m
 
 def main() {
     let result = m.multiply(5, 3)
@@ -64,21 +64,21 @@ def main() {
 
 ## **Nested Namespaces**
 
-Namespaces in b2 can be nested by organizing your code in directories. The directory structure determines the hierarchy of the namespaces.
+Namespaces in lotus can be nested by organizing your code in directories. The directory structure determines the hierarchy of the namespaces.
 
 ### **Example Directory Structure**
 ```
-b2lib/
+lotuslib/
     math/
-        basic.b2
-        advanced.b2
+        basic.lt
+        advanced.lt
 ```
 
 ### **Accessing Nested Namespaces**
-```b2
+```lotus
 import (
-    "github.com/dev-bittu/b2lib/math/basic" as basicmath
-    "github.com/dev-bittu/b2lib/math/advanced" as advmath
+    "github.com/dev-bittu/lotuslib/math/basic" as basicmath
+    "github.com/dev-bittu/lotuslib/math/advanced" as advmath
 )
 
 def main() {
@@ -111,7 +111,7 @@ def main() {
 If two imported namespaces have conflicting names, use aliases to differentiate them.
 
 ### **Example:**
-```b2
+```lotus
 import (
     "github.com/dev-bittu/mathlib/basic" as basicmath
     "github.com/dev-bittu/physicslib/basic" as basicphysics
@@ -128,7 +128,7 @@ def main() {
 ---
 
 ## **Why Use Namespaces?**
-Namespaces in b2 offer the following benefits:
+Namespaces in lotus offer the following benefits:
 - **Avoid Naming Conflicts:** Prevents clashes between identifiers in large projects.
 - **Improved Organization:** Groups related code into logical units.
 - **Code Reusability:** Promotes modular design and reusable components.
@@ -157,4 +157,4 @@ Namespaces in b2 offer the following benefits:
 
 ---
 
-Namespaces in b2 are designed to balance simplicity and power, making them easy to use while enabling robust code organization.
+Namespaces in lotus are designed to balance simplicity and power, making them easy to use while enabling robust code organization.

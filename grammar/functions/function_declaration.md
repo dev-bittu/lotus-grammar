@@ -8,7 +8,7 @@ Functions in MyLang are reusable blocks of code that perform specific tasks. The
 Functions are defined using the `def` keyword followed by the function name, parameters (if any), and the function body enclosed in `{}`.
 
 ### Example:
-```b2
+```lotus
 def greet() {
     print("Hello, World!")
 }
@@ -21,7 +21,7 @@ greet()
 Functions can accept parameters to make them dynamic. Parameter types are declared without `:` and are placed directly after the parameter name.
 
 ### Example:
-```b2
+```lotus
 def greet(name str) {
     print("Hello, " + name + "!")
 }
@@ -37,7 +37,7 @@ greet("Bittu")
 You can define default values for parameters. If no value is provided during the function call, the default is used.
 
 ### Example:
-```b2
+```lotus
 def greet(name str = "User") {
     print("Hello, " + name + "!")
 }
@@ -51,7 +51,7 @@ greet("Bittu")   // Output: Hello, Bittu!
 MyLang supports functions with multiple parameters.
 
 ### Example:
-```b2
+```lotus
 def add(a i32, b i32) {
     print(a + b)
 }
@@ -64,7 +64,7 @@ add(5, 3)  // Output: 8
 Use the `return` keyword to return a value. Specify the return type using parentheses `()` with the type.
 
 ### Example:
-```b2
+```lotus
 def multiply(a i32, b i32) (i32) {
     return a * b
 }
@@ -78,7 +78,7 @@ print(result)  // Output: 20
 Variable types are declared directly after the parameter name. Return types are specified in parentheses after the function signature.
 
 ### Example:
-```b2
+```lotus
 def divide(a f32, b f32) (f32) {
     return a / b
 }
@@ -91,7 +91,7 @@ print(divide(10.0, 2.0))  // Output: 5.0
 MyLang supports variadic arguments using `...`, allowing you to pass a variable number of arguments.
 
 ### Example:
-```b2
+```lotus
 def sum(...numbers i32) (i32) {
     total := 0
     for n in numbers {
@@ -108,7 +108,7 @@ print(sum(1, 2, 3, 4))  // Output: 10
 MyLang allows passing arguments as key-value pairs using dictionaries.
 
 ### Example:
-```b2
+```lotus
 def displayInfo(info dict<str, any>) {
     for key, value in info {
         print(key + ": " + value)
@@ -130,7 +130,7 @@ city: Delhi
 Pointers allow passing the memory address of a variable to enable modification of the original value.
 
 ### Example:
-```b2
+```lotus
 def increment(value *i32) {
     *value += 1
 }
@@ -145,7 +145,7 @@ print(num)  // Output: 11
 References allow accessing and modifying the original variable without explicitly using pointers.
 
 ### Example:
-```b2
+```lotus
 def double(value &i32) {
     value *= 2
 }
@@ -160,7 +160,7 @@ print(num)  // Output: 10
 A recursive function calls itself. This is useful for solving problems that can be divided into smaller, similar sub-problems.
 
 ### Example: Factorial
-```b2
+```lotus
 def factorial(n i32) (i32) {
     if n <= 1 {
         return 1
@@ -176,7 +176,7 @@ print(factorial(5))  // Output: 120
 MyLang allows functions to accept other functions as arguments or return them. When using higher-order functions, the `def` keyword is sufficient without specifying parameter or return types.
 
 ### Example:
-```b2
+```lotus
 def applyOperation(a i32, b i32, operation def) (i32) {
     return operation(a, b)
 }
@@ -194,7 +194,7 @@ print(applyOperation(5, 3, add))  // Output: 8
 You can mix positional arguments, default arguments, and variadic arguments.
 
 ### Example:
-```b2
+```lotus
 def calculate(a i32, b i32 = 10, ...extra i32) (i32) {
     result := a + b
     for val in extra {
@@ -212,7 +212,7 @@ print(calculate(5, 3, 1, 2))     // Output: 11
 Lambda functions are small, unnamed functions used for short tasks.
 
 ### Example:
-```b2
+```lotus
 square := def(x i32) (i32) {
     return x * x
 }
@@ -225,7 +225,7 @@ print(square(4))  // Output: 16
 MyLang supports function overloading, allowing multiple functions with the same name but different parameter types.
 
 ### Example:
-```b2
+```lotus
 def display(value i32) {
     print("Integer: " + value)
 }

@@ -1,15 +1,15 @@
-### Outputting Variables in b2  
+### Outputting Variables in lotus  
 
-The `print()` function in *b2* is used to display the values of variables. It supports various ways of combining and displaying data.
+The `print()` function in *lotus* is used to display the values of variables. It supports various ways of combining and displaying data.
 
 ---
 
 ### Basic Output  
 
 You can print a variable directly using `print()`  
-```b2
-x := "b2 is awesome"
-print(x)  // Outputs b2 is awesome
+```lotus
+x := "lotus is awesome"
+print(x)  // Outputs lotus is awesome
 ```
 
 ---
@@ -17,11 +17,11 @@ print(x)  // Outputs b2 is awesome
 ### Printing Multiple Variables  
 
 The `print()` function allows outputting multiple variables separated by commas. This is convenient for handling different data types  
-```b2
-x := "b2"
+```lotus
+x := "lotus"
 y := "is"
 z := "awesome"
-print(x, y, z)  // Outputs b2 is awesome
+print(x, y, z)  // Outputs lotus is awesome
 ```
 
 ---
@@ -29,21 +29,21 @@ print(x, y, z)  // Outputs b2 is awesome
 ### Using the `+` Operator  
 
 You can use the `+` operator to concatenate strings  
-```b2
-x := "b2 "
+```lotus
+x := "lotus "
 y := "is "
 z := "awesome"
-print(x + y + z)  // Outputs b2 is awesome
+print(x + y + z)  // Outputs lotus is awesome
 ```
 
-**Note:** Ensure that strings contain necessary spaces to avoid undesired results like `b2isawesome`.  
+**Note:** Ensure that strings contain necessary spaces to avoid undesired results like `lotusisawesome`.  
 
 ---
 
 ### Mathematical Operations with Numbers  
 
 The `+` operator also performs addition when used with numbers  
-```b2
+```lotus
 x := 5
 y := 10
 print(x + y)  // Outputs 15
@@ -53,15 +53,15 @@ print(x + y)  // Outputs 15
 
 ### Combining Strings and Numbers  
 
-When combining a string and a number with `+`, *b2* will throw an error  
-```b2
+When combining a string and a number with `+`, *lotus* will throw an error  
+```lotus
 x := 5
 y := "John"
 print(x + y)  // Error Cannot concatenate string and number
 ```
 
 The correct approach is to separate variables with commas  
-```b2
+```lotus
 x := 5
 y := "John"
 print(x, y)  // Outputs 5 John
@@ -75,4 +75,4 @@ print(x, y)  // Outputs 5 John
 - Use the `+` operator for string concatenation or numerical addition.  
 - Avoid combining strings and numbers with `+` to prevent errors.  
 
-These methods allow versatile and error-free output handling in *b2*.
+These methods allow versatile and error-free output handling in *lotus*.

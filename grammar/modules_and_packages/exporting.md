@@ -1,6 +1,6 @@
-# Exporting in b2
+# Exporting in lotus
 
-In **b2**, variables, functions, classes, interfaces, and other entities follow a simple and intuitive exporting mechanism to control visibility and accessibility across packages. The system ensures flexibility without introducing unnecessary verbosity or complexity.
+In **lotus**, variables, functions, classes, interfaces, and other entities follow a simple and intuitive exporting mechanism to control visibility and accessibility across packages. The system ensures flexibility without introducing unnecessary verbosity or complexity.
 
 ---
 
@@ -11,33 +11,33 @@ In **b2**, variables, functions, classes, interfaces, and other entities follow 
 2. **Private Prefix (_):**  
    Any entity prefixed with an underscore (`_`) is **private** to the package and will not be exported.  
    - Example:  
-     ```b2
+     ```lotus
      let (
          some_var = 42       // Public
          _private_var = 23   // Private
      )
      const (
          CONST_VAR = 3.14    // Public
-         _CONST_VAR = "b2"   // Private
+         _CONST_VAR = "lotus"   // Private
      )
      ```
 
-3. **Explicit Control with `pkg.b2`:**  
-   Each package can include a special file named `pkg.b2` (similar to Python’s `__init__.py`) to explicitly define what to **include** or **exclude** from being exported.  
-   - You can **either** include or exclude but not both within a single `pkg.b2` file.
-   - The rules defined in `pkg.b2` apply **only** to entities that are not explicitly marked as private with `_`.
+3. **Explicit Control with `pkg.lt`:**  
+   Each package can include a special file named `pkg.lt` (similar to Python’s `__init__.py`) to explicitly define what to **include** or **exclude** from being exported.  
+   - You can **either** include or exclude but not both within a single `pkg.lt` file.
+   - The rules defined in `pkg.lt` apply **only** to entities that are not explicitly marked as private with `_`.
 
 ---
 
-## **Using `pkg.b2`**
-The `pkg.b2` file is optional but provides fine-grained control for exporting. It must reside in the package directory.
+## **Using `pkg.lt`**
+The `pkg.lt` file is optional but provides fine-grained control for exporting. It must reside in the package directory.
 
 ### **Including Entities**
-When you list entities in the `pkg.b2` file, only the specified ones are exported, and everything else becomes private.  
+When you list entities in the `pkg.lt` file, only the specified ones are exported, and everything else becomes private.  
 
 - **Example:**
-  ```b2
-  // pkg.b2
+  ```lotus
+  // pkg.lt
   export [
       some_var
       CONST_VAR
@@ -52,8 +52,8 @@ When you list entities in the `pkg.b2` file, only the specified ones are exporte
 You can list entities to explicitly exclude them from being exported.
 
 - **Example:**
-  ```b2
-  // pkg.b2
+  ```lotus
+  // pkg.lt
   exclude [
       _private_var
       CONST_VAR
@@ -68,16 +68,16 @@ You can list entities to explicitly exclude them from being exported.
 
 ## **Priority of Rules**
 1. **Private Prefix (`_`)**  
-   Entities prefixed with `_` are always private, even if listed in `include` in `pkg.b2`.
+   Entities prefixed with `_` are always private, even if listed in `include` in `pkg.lt`.
 
    - Example:  
-     ```b2
+     ```lotus
      let _never_exported = 42
      ```
-     This variable will **never** be exported, even if explicitly included in `pkg.b2`.
+     This variable will **never** be exported, even if explicitly included in `pkg.lt`.
 
-2. **`pkg.b2` File**  
-   The rules defined in `pkg.b2` apply only to entities that are not explicitly marked with `_`.
+2. **`pkg.lt` File**  
+   The rules defined in `pkg.lt` apply only to entities that are not explicitly marked with `_`.
 
 ---
 
@@ -85,13 +85,13 @@ You can list entities to explicitly exclude them from being exported.
 The design ensures:
 - **Simplicity:** No verbose syntax is required for controlling visibility.  
 - **Consistency:** Naming conventions like `_` are easy to understand.  
-- **Flexibility:** The `pkg.b2` file allows explicit control for larger packages.  
+- **Flexibility:** The `pkg.lt` file allows explicit control for larger packages.  
 - **Readability:** Developers can quickly identify public vs. private entities without additional annotations.
 
 ---
 
 ## **How Other Languages Handle Exporting**
-Here’s how other languages deal with exporting, influencing b2's design:  
+Here’s how other languages deal with exporting, influencing lotus's design:  
 
 | Language       | Exporting Mechanism                                                                                                                                      |
 |----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -106,6 +106,6 @@ Here’s how other languages deal with exporting, influencing b2's design:
 
 ## **Best Practices**
 1. Use `_` for truly private entities to avoid accidental misuse.
-2. Prefer using `pkg.b2` for larger packages where fine-grained control is necessary.
+2. Prefer using `pkg.lt` for larger packages where fine-grained control is necessary.
 3. Keep your exported API surface minimal to reduce complexity for users of your package.
 4. Always document public exports for clarity.

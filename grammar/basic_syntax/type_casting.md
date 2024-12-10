@@ -1,6 +1,6 @@
-### Specifying a Variable Type in *b2*
+### Specifying a Variable Type in *lotus*
 
-In *b2*, you can specify the type of a variable through **casting**. This allows you to convert values from one type to another. *b2* uses constructor functions for casting, which work by converting one data type into another. This is especially useful when you want to ensure a variable has a specific type.
+In *lotus*, you can specify the type of a variable through **casting**. This allows you to convert values from one type to another. *lotus* uses constructor functions for casting, which work by converting one data type into another. This is especially useful when you want to ensure a variable has a specific type.
 
 ### Casting Constructor Functions
 
@@ -11,7 +11,7 @@ In *b2*, you can specify the type of a variable through **casting**. This allows
 ### Example: Casting Integers
 The `i64()` constructor can be used to convert various types into an integer:
 
-```b2
+```lotus
 let x i64 = i64(1)    // x will be 1
 let y i64 = i64(2.8)  // y will be 2 (decimal part is truncated)
 let z i64 = i64("3")  // z will be 3 (string "3" is converted to integer)
@@ -20,7 +20,7 @@ let z i64 = i64("3")  // z will be 3 (string "3" is converted to integer)
 ### Example: Casting Floats
 The `f32()` constructor converts values into a float type:
 
-```b2
+```lotus
 let x f32 = f32(1)     // x will be 1.0 (converted from integer)
 let y f32 = f32(2.8)   // y will be 2.8
 let z f32 = f32("3")   // z will be 3.0 (string "3" is converted to float)
@@ -30,7 +30,7 @@ let w f32 = f32("4.2") // w will be 4.2
 ### Example: Casting Strings
 The `str()` constructor converts values into strings:
 
-```b2
+```lotus
 let x str = str("s1")  // x will be "s1"
 let y str = str(2)     // y will be "2" (integer 2 is converted to string)
 let z str = str(3.0)   // z will be "3.0" (float 3.0 is converted to string)
@@ -46,4 +46,4 @@ let z str = str(3.0)   // z will be "3.0" (float 3.0 is converted to string)
 | `f32()`     | Float       | `f32(1)`, `f32(2.8)`, `f32("3")`      |
 | `str()`     | String      | `str("s1")`, `str(2)`, `str(3.0)`      |
 
-Casting allows you to flexibly work with different data types in *b2* and ensure that variables are of the correct type for your logic.
+Casting allows you to flexibly work with different data types in *lotus* and ensure that variables are of the correct type for your logic.

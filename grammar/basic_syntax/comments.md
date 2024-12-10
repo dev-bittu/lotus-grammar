@@ -1,6 +1,6 @@
-### Comments in b2
+### Comments in lotus
 
-Comments in *b2* can be used to  
+Comments in *lotus* can be used to  
 - Explain the code.  
 - Improve code readability.  
 - Temporarily prevent code execution for testing or debugging.  
@@ -9,7 +9,7 @@ Comments in *b2* can be used to
 Single-line comments start with `//`. Anything after `//` is ignored by the compiler.  
 
 **Example:**  
-```b2
+```lotus
 pkg main
 
 def main() {
@@ -19,7 +19,7 @@ def main() {
 ```
 
 Single-line comments can also be placed at the end of a line  
-```b2
+```lotus
 pkg main
 
 def main() {
@@ -31,7 +31,7 @@ def main() {
 Multiline comments are enclosed within `/*` and `*/`.  
 
 **Example:**  
-```b2
+```lotus
 /* This is a comment
    written in
    multiple lines */
@@ -42,7 +42,7 @@ print("Hello, World!")
 Multiline strings (using triple quotes) can be used as comments. As long as the string is not assigned to a variable, it will be ignored by the compiler.  
 
 **Example:**  
-```b2
+```lotus
 pkg main
 
 def main() {

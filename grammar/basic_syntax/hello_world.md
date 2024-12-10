@@ -1,9 +1,9 @@
-### Writing "Hello, World!" in b2  
+### Writing "Hello, World!" in lotus  
 
-The "Hello, World!" program is a simple way to demonstrate the basic syntax of *b2*.  
+The "Hello, World!" program is a simple way to demonstrate the basic syntax of *lotus*.  
 
 ### Example  
-```b2
+```lotus
 pkg main
 
 def main() {
@@ -13,7 +13,7 @@ def main() {
 
 ### Explanation  
 1. **`pkg main`**  
-   Declares the main package, which is the entry point for *b2* programs.  
+   Declares the main package, which is the entry point for *lotus* programs.  
 
 2. **`def main()`**  
    Defines the `main` function. This is the starting point of the program, where execution begins.  
@@ -21,4 +21,4 @@ def main() {
 3. **`print("Hello, World!")`**  
    Outputs the string `"Hello, World!"` to the console.  
 
-This example shows the simplicity and readability of *b2*, resembling Python's style while maintaining the structure of a compiled language.
+This example shows the simplicity and readability of *lotus*, resembling Python's style while maintaining the structure of a compiled language.

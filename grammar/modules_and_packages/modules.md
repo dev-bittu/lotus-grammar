@@ -14,37 +14,37 @@ Modules in MyLang provide a way to structure code into reusable components. They
 
 ### **File Structure**
 ```plaintext
-main.b2
+main.lt
 package.json
 package-lock.json
-b2_moduels/
+lotus_moduels/
     ...
 pkg/
     myclass/
-        myclass.b2
-        static_funs.b2text
+        myclass.lt
+        static_funs.lttext
     ...
 ```
 
 #### **Explanation**
-- `main.b2`: Entry point of the program.
+- `main.lt`: Entry point of the program.
 - `package.json`: Contains metadata and dependency information about the project.
 - `package-lock.json`: Tracks specific dependency versions.
-- `b2_modules/`: Contains external libraries (like Node.js `node_modules`).
+- `lotus_modules/`: Contains external libraries (like Node.js `node_modules`).
 - `pkg/`: Holds custom modules and packages for your project.
 
 ---
 
 ### **Example Module Structure**
 
-#### `main.b2`  
+#### `main.lt`  
 The entry point of the program.
 
-```b2
+```lotus
 pkg main
 
 import (
-    "github.com/dev-bittu/b2test/pkg/myclass" as mycls
+    "github.com/dev-bittu/lotustest/pkg/myclass" as mycls
 )
 
 def main() {
@@ -57,9 +57,9 @@ def main() {
 
 ---
 
-#### `myclass.b2`  
+#### `myclass.lt`  
 Defines a class and its associated static variables.
-```b2
+```lotus
 pkg myclass
 
 class MyClass {
@@ -73,10 +73,10 @@ def (mcl MyClass) __init__() {
 
 ---
 
-#### `static_funs.b2`  
+#### `static_funs.lt`  
 Contains additional static functions for the `MyClass` module.
 
-```b2
+```lotus
 pkg myclass
 
 def MyClass.increase_count() {
@@ -91,14 +91,14 @@ Defines metadata and dependencies for the project.
 
 ```json
 {
-    "name": "b2test",
+    "name": "lotustest",
     "version": "1.0.0",
     "description": "A demo MyLang project",
-    "main": "main.b2",
+    "main": "main.lt",
     "dependencies": {
         "some-dependency": "^1.0.0"
     },
-    "project": "github.com/dev-bittu/b2test"
+    "project": "github.com/dev-bittu/lotustest"
 }
 ```
 
@@ -109,7 +109,7 @@ Tracks exact dependency versions (similar to Node.js).
 
 ```json
 {
-    "name": "b2test",
+    "name": "lotustest",
     "lockfileVersion": 1,
     "dependencies": {
         "some-dependency": {
@@ -129,16 +129,16 @@ Tracks exact dependency versions (similar to Node.js).
 - You can alias a module for simpler access using `as`.
 
 #### **Syntax**
-```b2
+```lotus
 import (
     "module/path" as alias
 )
 ```
 
 #### **Example**
-```b2
+```lotus
 import (
-    "github.com/dev-bittu/b2test/pkg/myclass" as mycls
+    "github.com/dev-bittu/lotustest/pkg/myclass" as mycls
 )
 
 def main() {
@@ -164,7 +164,7 @@ def main() {
 1. **Use `package` Statement**: Clearly define the package for every file to avoid ambiguity.
 2. **Organize Code Logically**: Use directories like `pkg/` for your project-specific packages.
 3. **Avoid Circular Imports**: Plan dependencies to prevent cyclic module references.
-4. **Use `b2_modules` for External Libraries**: Manage third-party packages in the `b2_modules` directory.
+4. **Use `lotus_modules` for External Libraries**: Manage third-party packages in the `lotus_modules` directory.
 5. **Modularize Code**: Split large modules into smaller, reusable components.
 
 ---

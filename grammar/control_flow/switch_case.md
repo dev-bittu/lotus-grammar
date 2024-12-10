@@ -1,12 +1,12 @@
-### `switch`/`case` in **b2**
+### `switch`/`case` in **lotus**
 
-The `switch`/`case` statement in **b2** is a control flow structure used to execute one out of several possible blocks of code, depending on the value of a given expression. It allows you to compare a variable or expression with different cases, making it more efficient than using multiple `if-else` statements when dealing with many possible conditions.
+The `switch`/`case` statement in **lotus** is a control flow structure used to execute one out of several possible blocks of code, depending on the value of a given expression. It allows you to compare a variable or expression with different cases, making it more efficient than using multiple `if-else` statements when dealing with many possible conditions.
 
 The `switch`/`case` structure is typically used to handle multiple conditions in a concise and readable way.
 
 ### Basic Syntax
 
-```b2
+```lotus
 switch expression {
     case value1:
         // Code to execute if expression equals value1
@@ -24,7 +24,7 @@ switch expression {
 
 ### Example 1: Basic `switch`/`case`
 
-```b2
+```lotus
 day := 3
 switch day {
     case 1:
@@ -54,7 +54,7 @@ Wednesday
 
 ### Example 2: `switch`/`case` with String Matching
 
-```b2
+```lotus
 fruit := "banana"
 switch fruit {
     case "apple":
@@ -82,7 +82,7 @@ Bananas are rich in potassium.
 
 You can group multiple `case` values together to execute the same block of code for different conditions.
 
-```b2
+```lotus
 month := 7
 switch month {
     case 1, 2, 3:
@@ -111,7 +111,7 @@ Third quarter of the year.
 
 The `default` case is optional. If you don't need a fallback, you can omit it.
 
-```b2
+```lotus
 color := "blue"
 switch color {
     case "red":
@@ -136,7 +136,7 @@ Color is blue
 
 You can also use expressions in `switch`/`case` to evaluate more complex conditions.
 
-```b2
+```lotus
 x := 10
 switch x % 2 {
     case 0:
@@ -162,7 +162,7 @@ The **`fallthrough`** keyword is used to allow execution to continue into the ne
 
 ### Basic Syntax with Fallthrough:
 
-```b2
+```lotus
 switch expression {
     case value1:
         // Code to execute if expression equals value1
@@ -176,7 +176,7 @@ switch expression {
 
 ### Example 1: Basic Switch with Fallthrough
 
-```b2
+```lotus
 day := 3
 switch day {
     case 1:
@@ -213,9 +213,9 @@ Thursday
 
 Let’s also use an example with a **custom enum-like** structure, which could be useful for more structured case handling.
 
-In **b2**, there isn’t a direct `enum` type, but we can simulate it by using constants or a `struct`. Here’s an example using string constants to mimic enums:
+In **lotus**, there isn’t a direct `enum` type, but we can simulate it by using constants or a `struct`. Here’s an example using string constants to mimic enums:
 
-```b2
+```lotus
 // Defining day enum
 enum day {
     MONDAY,

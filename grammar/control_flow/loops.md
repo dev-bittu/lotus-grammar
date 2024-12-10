@@ -1,12 +1,12 @@
-### `while` Loop in **b2**
+### `while` Loop in **lotus**
 
 The `while` loop is used to execute a block of code as long as the condition is `true`. The condition is evaluated before each iteration, and if it's `true`, the code inside the loop is executed. Once the condition becomes `false`, the loop stops.
 
-In **b2**, loops are defined using curly braces `{}` to enclose the block of code that should be repeated.
+In **lotus**, loops are defined using curly braces `{}` to enclose the block of code that should be repeated.
 
 ### Basic Syntax
 
-```b2
+```lotus
 while condition {
     // Code to execute as long as the condition is true
 }
@@ -20,7 +20,7 @@ while condition {
 
 ### Example: Basic `while` Loop
 
-```b2
+```lotus
 count := 0
 while count < 5 {
     print(count)
@@ -51,7 +51,7 @@ If the condition in a `while` loop never becomes `false`, the loop will continue
 
 #### Example of Infinite Loop (Dangerous!):
 
-```b2
+```lotus
 while true {
     print("This loop will never stop!")
 }
@@ -65,7 +65,7 @@ The `break` statement is used to exit the `while` loop before the condition beco
 
 #### Example with `break`:
 
-```b2
+```lotus
 count := 0
 while count < 10 {
     if count == 5 {
@@ -91,7 +91,7 @@ The `continue` statement is used to skip the rest of the code inside the loop fo
 
 #### Example with `continue`:
 
-```b2
+```lotus
 count := 0
 while count < 5 {
     count = count + 1
@@ -114,15 +114,15 @@ In this example, when `count` reaches 3, the `continue` statement is executed, w
 
 ---
 
-### `for` Loop in **b2**
+### `for` Loop in **lotus**
 
-The `for` loop in **b2** is used to iterate over a sequence (like a list, tuple, string, or dictionary) and execute a block of code for each item in the sequence. The loop automatically iterates through each element in the sequence, making it ideal for looping over collections.
+The `for` loop in **lotus** is used to iterate over a sequence (like a list, tuple, string, or dictionary) and execute a block of code for each item in the sequence. The loop automatically iterates through each element in the sequence, making it ideal for looping over collections.
 
 The `for` loop is defined using curly braces `{}` and follows a specific syntax to iterate through elements in a sequence.
 
 ### Basic Syntax
 
-```b2
+```lotus
 for item in sequence {
     // Code to execute for each item
 }
@@ -136,7 +136,7 @@ for item in sequence {
 
 ### Example 1: Basic `for` Loop (Iterating through a List)
 
-```b2
+```lotus
 fruits := ["apple", "banana", "cherry"]
 for fruit in fruits {
     print(fruit)
@@ -156,9 +156,9 @@ cherry
 
 ### Example 2: `for` Loop with a Range (Iteration over a Range of Numbers)
 
-In **b2**, you can use a `range` to create a sequence of numbers, which is useful for looping a specific number of times.
+In **lotus**, you can use a `range` to create a sequence of numbers, which is useful for looping a specific number of times.
 
-```b2
+```lotus
 for i in range(5) {
     print(i)
 }
@@ -180,7 +180,7 @@ for i in range(5) {
 
 Dictionaries contain key-value pairs, and you can loop through both the keys and values using a `for` loop.
 
-```b2
+```lotus
 person := {
     "name": "John",
     "age": 36,
@@ -206,7 +206,7 @@ city New York
 
 If the sequence is an iterable with multiple elements (such as a list of tuples), you can use unpacking to assign multiple variables during each iteration.
 
-```b2
+```lotus
 pairs := [(1, "apple"), (2, "banana"), (3, "cherry")]
 for num, fruit in pairs {
     print(num, fruit)
@@ -227,7 +227,7 @@ for num, fruit in pairs {
 
 If you want to access both the index and the item in the sequence, you can use a combination of `range` and the sequence length.
 
-```b2
+```lotus
 fruits := ["apple", "banana", "cherry"]
 for i in range(len(fruits)) {
     print(i, fruits[i])
@@ -248,7 +248,7 @@ for i in range(len(fruits)) {
 
 You can also use `if` conditions inside a `for` loop to execute specific actions based on certain criteria.
 
-```b2
+```lotus
 numbers := [1, 2, 3, 4, 5]
 for num in numbers {
     if num % 2 == 0 {
@@ -271,7 +271,7 @@ for num in numbers {
 
 You can also use nested `for` loops, where one `for` loop is inside another.
 
-```b2
+```lotus
 rows := 3
 columns := 4
 for i in range(rows) {
@@ -307,7 +307,7 @@ for i in range(rows) {
 
 #### Example with `break`:
 
-```b2
+```lotus
 numbers := [1, 2, 3, 4, 5]
 for num in numbers {
     if num == 3 {
@@ -325,7 +325,7 @@ for num in numbers {
 
 #### Example with `continue`:
 
-```b2
+```lotus
 numbers := [1, 2, 3, 4, 5]
 for num in numbers {
     if num == 3 {

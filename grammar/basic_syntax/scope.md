@@ -19,7 +19,7 @@ In MyLang, **scope** refers to the region in a program where a variable, functio
 Variables or functions declared in the global scope are accessible throughout the program unless shadowed by local variables.
 
 #### **Example**
-```b2
+```lotus
 let global_var = 100
 
 def ShowGlobalVar() {
@@ -40,7 +40,7 @@ ShowGlobalVar()  // Output: 100
 Variables declared within a function or block are only accessible within that specific function or block.
 
 #### **Example**
-```b2
+```lotus
 def LocalScopeDemo() {
     let local_var i32 = 50
     print(local_var)  // Accessible here
@@ -60,7 +60,7 @@ LocalScopeDemo()
 ### **3. Class/Instance Scope**
 
 #### **Example**
-```b2
+```lotus
 class MyClass {
     let instance_var i32 = 10
 }
@@ -84,7 +84,7 @@ my_instance.ShowInstanceVar()  // Output: 10
 Static variables belong to the class rather than any specific instance. They retain their value across instances and function calls.
 
 #### **Example**
-```b2
+```lotus
 class MyClass {
     static static_var i32 = 0
 }
@@ -110,7 +110,7 @@ IncrementStaticVar()  // Output: 2
 Variables declared inside loops, conditional statements, or other blocks are only accessible within that block.
 
 #### **Example**
-```b2
+```lotus
 if true {
     let block_var int = 20
     print(block_var)  // Accessible here
@@ -130,7 +130,7 @@ if true {
 A variable in a narrower scope (e.g., local) can shadow a variable with the same name in a broader scope (e.g., global).
 
 #### **Example**
-```b2
+```lotus
 let var_name int = 100
 
 def ShadowScope() {

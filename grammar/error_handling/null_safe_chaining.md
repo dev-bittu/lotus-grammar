@@ -1,5 +1,5 @@
-# Null-Safe Chaining in b2
-Null-safe chaining is a feature in **b2** that simplifies operations on nullable variables by allowing you to safely access their properties and methods without having to write explicit null checks at every step. This operator is represented by `?.` in b2.
+# Null-Safe Chaining in lotus
+Null-safe chaining is a feature in **lotus** that simplifies operations on nullable variables by allowing you to safely access their properties and methods without having to write explicit null checks at every step. This operator is represented by `?.` in lotus.
 
 ---
 
@@ -18,7 +18,7 @@ Nullable types (e.g., `str?`, `int?`) can lead to runtime errors if you attempt 
 The `?.` operator is used to access properties or methods of nullable types. If the left-hand operand is `null`, the expression immediately evaluates to `null` without throwing an error.
 
 ### Syntax:
-```b2
+```lotus
 nullable_expression?.property_or_method
 ```
 
@@ -26,11 +26,11 @@ nullable_expression?.property_or_method
 
 ### Example: Basic Null-Safe Chaining
 
-```b2
-let name str? = "b2 Language"
+```lotus
+let name str? = "lotus Language"
 let upper_name = name?.lower()?.upper()
 
-print(upper_name)  // Output: B2 LANGUAGE
+print(upper_name)  // Output: Lotus LANGUAGE
 ```
 
 Here’s how it works:
@@ -41,7 +41,7 @@ Here’s how it works:
 
 ### Example: Handling `null`
 
-```b2
+```lotus
 let name str? = null
 let upper_name = name?.lower()?.upper()
 
@@ -57,7 +57,7 @@ If `name` is `null`, the entire chain resolves to `null` without any runtime err
 You can combine null-safe chaining with the null coalescing operator (`??`) to provide a default value when the chain evaluates to `null`.
 
 ### Example:
-```b2
+```lotus
 let name str? = null
 let upper_name = name?.lower()?.upper() ?? "UNKNOWN"
 
@@ -69,7 +69,7 @@ print(upper_name)  // Output: UNKNOWN
 ## Practical Scenarios for Null-Safe Chaining
 
 1. **Accessing Nested Properties**
-   ```b2
+   ```lotus
    let user = {
        "name": "John",
        "address": {
@@ -84,14 +84,14 @@ print(upper_name)  // Output: UNKNOWN
    ```
 
 2. **Method Calls**
-   ```b2
+   ```lotus
    let name str? = "hello"
    let upper_name = name?.capitalize()?.upper()
    print(upper_name)  // Output: HELLO
    ```
 
 3. **Function Results**
-   ```b2
+   ```lotus
    def getUserName(id int) -> str? {
        if id == 1 { return "Alice" }
        return null
@@ -108,7 +108,7 @@ print(upper_name)  // Output: UNKNOWN
 Null-safe chaining ensures that you avoid null pointer exceptions, a common source of runtime errors in many programming languages. If a `null` value is encountered anywhere in the chain, the operation halts and evaluates to `null`.
 
 ### Without Null-Safe Chaining:
-```b2
+```lotus
 let name str? = null
 if name != null {
     let lower_name = name.lower()
@@ -120,14 +120,14 @@ if name != null {
 ```
 
 ### With Null-Safe Chaining:
-```b2
+```lotus
 let name str? = null
 print(name?.lower()?.upper())  // Output: null
 ```
 
 ---
 
-## Benefits of Null-Safe Chaining in b2
+## Benefits of Null-Safe Chaining in lotus
 
 - **Minimal Syntax**: Reduces the need for verbose null-checking code.
 - **Readability**: Improves the clarity of code by avoiding deep nesting.
@@ -145,4 +145,4 @@ print(name?.lower()?.upper())  // Output: null
 
 ### Summary
 
-Null-safe chaining (`?.`) is a powerful and concise feature in **b2** that simplifies null handling. It reduces boilerplate code, prevents null pointer exceptions, and ensures safe operations on nullable types. Combined with the null coalescing operator (`??`), it provides a robust way to handle nullable values effectively in a clean and readable manner.
+Null-safe chaining (`?.`) is a powerful and concise feature in **lotus** that simplifies null handling. It reduces boilerplate code, prevents null pointer exceptions, and ensures safe operations on nullable types. Combined with the null coalescing operator (`??`), it provides a robust way to handle nullable values effectively in a clean and readable manner.

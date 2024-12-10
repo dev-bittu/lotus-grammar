@@ -1,6 +1,6 @@
-### Variable Naming in b2  
+### Variable Naming in lotus  
 
-In *b2*, variable names can range from short, single letters to descriptive, multi-word names. Following specific rules ensures compatibility and avoids errors.  
+In *lotus*, variable names can range from short, single letters to descriptive, multi-word names. Following specific rules ensures compatibility and avoids errors.  
 
 ---
 
@@ -18,14 +18,14 @@ In *b2*, variable names can range from short, single letters to descriptive, mul
    Variable names are case-sensitive. For example, `age`, `Age`, and `AGE` are distinct variables.  
 
 5. **Avoid Keywords**  
-   Variable names cannot use reserved *b2* keywords.  
+   Variable names cannot use reserved *lotus* keywords.  
 
 ---
 
 ### Examples  
 
 **Legal Variable Names:**  
-```b2
+```lotus
 myvar := "bittu"
 my_var := "bittu"
 _my_var := "bittu"
@@ -35,7 +35,7 @@ myvar2 := "bittu"
 ```
 
 **Illegal Variable Names:**  
-```b2
+```lotus
 2myvar := "bittu"  // Cannot start with a number
 my-var := "bittu"  // Hyphen is not allowed
 my var := "bittu"  // Spaces are not allowed
@@ -49,20 +49,20 @@ To improve readability, you can use these conventions for multi-word variable na
 
 1. **Camel Case**  
 The first word starts with a lowercase letter; subsequent words start with an uppercase letter  
-```b2
+```lotus
 myVariableName := "bittu"
 ```
 
 2. **Pascal Case**  
 Each word starts with an uppercase letter  
-```b2
+```lotus
 MyVariableName := "bittu"
 ```
 
 3. **Snake Case**  
 Words are separated by underscores  
-```b2
+```lotus
 my_variable_name := "bittu"
 ```  
 
-By following these conventions and rules, you can write clear and maintainable *b2* code.
+By following these conventions and rules, you can write clear and maintainable *lotus* code.

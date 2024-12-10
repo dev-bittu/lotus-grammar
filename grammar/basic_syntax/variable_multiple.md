@@ -1,28 +1,28 @@
-### Assigning Values to Variables in b2  
+### Assigning Values to Variables in lotus  
 
-*b2* offers flexible ways to assign values to variables, including multiple assignments and unpacking.  
+*lotus* offers flexible ways to assign values to variables, including multiple assignments and unpacking.  
 
 ---
 
 ### Assigning Multiple Values to Multiple Variables  
 
 You can assign values to multiple variables in a single line  
-```b2
+```lotus
 x, y, z := "Orange", "Banana", "Cherry"
 print(x)
 print(y)
 print(z)
 ```
 
-**Note:** Ensure the number of variables matches the number of values. Otherwise, *b2* will raise an error.  
+**Note:** Ensure the number of variables matches the number of values. Otherwise, *lotus* will raise an error.  
 
 ---
 
 ### Assigning One Value to Multiple Variables  
 
-*b2* does **not** allow assigning the same value to multiple variables in a single line  
-```b2
-// This is invalid in b2:
+*lotus* does **not** allow assigning the same value to multiple variables in a single line  
+```lotus
+// This is invalid in lotus:
 x = y = z = "Orange"  // Error Multiple assignments with a single value are not supported
 ```
 
@@ -30,10 +30,10 @@ x = y = z = "Orange"  // Error Multiple assignments with a single value are not 
 
 ### Unpacking a Collection  
 
-*b2* allows unpacking collections such as lists, tuples, etc., into individual variables.  
+*lotus* allows unpacking collections such as lists, tuples, etc., into individual variables.  
 
 **Example – Unpacking a List:**  
-```b2
+```lotus
 fruits := ["apple", "banana", "cherry"]
 x, y, z := fruits
 print(x)  // Outputs apple
@@ -45,4 +45,4 @@ By unpacking, each variable is assigned a corresponding value from the collectio
 
 --- 
 
-These features make *b2* efficient for handling multiple values in a clear and concise way.
+These features make *lotus* efficient for handling multiple values in a clear and concise way.
