@@ -41,8 +41,6 @@ pkg/
 The entry point of the program.
 
 ```lotus
-pkg main
-
 import (
     "github.com/dev-bittu/lotustest/pkg/myclass" as mycls
 )
@@ -60,8 +58,6 @@ def main() {
 #### `myclass.lt`  
 Defines a class and its associated static variables.
 ```lotus
-pkg myclass
-
 class MyClass {
     static count = 0
 }
@@ -77,8 +73,6 @@ def (mcl MyClass) __init__() {
 Contains additional static functions for the `MyClass` module.
 
 ```lotus
-pkg myclass
-
 def MyClass.increase_count() {
     MyClass.count += 1  // Increment the static count
 }

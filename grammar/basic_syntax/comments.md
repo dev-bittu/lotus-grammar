@@ -10,8 +10,6 @@ Single-line comments start with `//`. Anything after `//` is ignored by the comp
 
 **Example:**  
 ```lotus
-pkg main
-
 def main() {
     // This is a single-line comment
     print("Hello, World!")
@@ -20,8 +18,6 @@ def main() {
 
 Single-line comments can also be placed at the end of a line  
 ```lotus
-pkg main
-
 def main() {
     print("Hello, World!")  // This is a comment
 }
@@ -43,8 +39,6 @@ Multiline strings (using triple quotes) can be used as comments. As long as the 
 
 **Example:**  
 ```lotus
-pkg main
-
 def main() {
     """
     This is a comment

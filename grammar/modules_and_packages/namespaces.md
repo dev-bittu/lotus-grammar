@@ -8,8 +8,6 @@ A **namespace** is a logical grouping of code entities (functions, classes, vari
 
 For example:  
 ```lotus
-pkg utils
-
 def add(a i32, b i32) i32 {
     return a + b
 }
@@ -22,8 +20,6 @@ Here, `utils` is the namespace. To access `add` from another pkg, you’ll refer
 Namespaces in lotus are defined using the `pkg` keyword, which specifies the pkg name at the top of the file.  
 - Example:  
   ```lotus
-  pkg math
-
   def multiply(a i32, b i32) i32 {
       return a * b
   }
@@ -37,8 +33,6 @@ To use a namespace, you import the corresponding pkg into your code. lotus suppo
 ### **Importing a pkg**
 Use the `import` keyword to bring a namespace into your code:
 ```lotus
-pkg main
-
 import "github.com/dev-bittu/lotuslib/math"
 
 def main() {
@@ -50,8 +44,6 @@ def main() {
 ### **Alias a Namespace**
 You can use an alias to simplify long namespace paths:
 ```lotus
-pkg main
-
 import "github.com/dev-bittu/lotuslib/math" as m
 
 def main() {

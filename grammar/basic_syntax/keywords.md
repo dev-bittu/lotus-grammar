@@ -23,4 +23,4 @@ class, extends, impl, enum, interface,
 
 def, delete, new, yield
 
-pkg, import, as,
+import, as,

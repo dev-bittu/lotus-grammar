@@ -29,8 +29,6 @@
 - **Static Typing** Enables safer code with fewer runtime errors, thanks to strong type-checking.
 
 ```lotus
-pkg main
-
 def main() {
     print("Hello World!")
 }
