@@ -1,10 +1,10 @@
-### **Scope in MyLang**
+### **Scope in Lotus**
 
-In MyLang, **scope** refers to the region in a program where a variable, function, or object is accessible. Understanding scope is crucial to manage variable visibility, avoid name conflicts, and optimize memory usage.
+In Lotus, **scope** refers to the region in a program where a variable, function, or object is accessible. Understanding scope is crucial to manage variable visibility, avoid name conflicts, and optimize memory usage.
 
 ---
 
-### **Types of Scope in MyLang**
+### **Types of Scope in Lotus**
 
 1. **Global Scope**  
 2. **Local Scope**  
@@ -169,4 +169,4 @@ print(var_name)  // Output: 100
 
 ### **Conclusion**
 
-Understanding scope in MyLang helps developers write clean, efficient, and bug-free code by controlling variable accessibility and lifetime effectively. By leveraging the different scopes—global, local, class, static, and block—developers can build maintainable and organized programs.
+Understanding scope in Lotus helps developers write clean, efficient, and bug-free code by controlling variable accessibility and lifetime effectively. By leveraging the different scopes—global, local, class, static, and block—developers can build maintainable and organized programs.

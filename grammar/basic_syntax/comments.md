@@ -24,17 +24,6 @@ def main() {
 ```
 
 ### Multiline Comments  
-Multiline comments are enclosed within `/*` and `*/`.  
-
-**Example:**  
-```lotus
-/* This is a comment
-   written in
-   multiple lines */
-print("Hello, World!")
-```
-
-### Alternative Multiline Comments  
 Multiline strings (using triple quotes) can be used as comments. As long as the string is not assigned to a variable, it will be ignored by the compiler.  
 
 **Example:**  

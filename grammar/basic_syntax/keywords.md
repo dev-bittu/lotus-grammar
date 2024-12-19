@@ -21,6 +21,6 @@ def, return, defer,
 
 class, extends, impl, enum, interface,
 
-def, delete, new, yield
+delete, new, yield
 
 import, as,

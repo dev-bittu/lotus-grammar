@@ -21,15 +21,9 @@
 
 ### Why Choose lotus?  
 *lotus* stands out with these features  
-- **Cross-Platform Support** Works seamlessly across Windows, Mac, Linux, Raspberry Pi, and more.  
-- **Simple Syntax** Offers a clean, intuitive syntax inspired by Python, making it easy to learn and use.  
-- **Code Efficiency** Allows developers to write concise, readable code, reducing boilerplate.  
-- **Multiple Paradigms** Supports procedural, object-oriented, and functional programming styles.  
-- **Performance** Delivers near-C/C++ performance, suitable for resource-intensive tasks.  
+- **Cross-Platform Support** Works seamlessly across Windows, Mac, Linux, Raspberry Pi, and more.
+- **Simple Syntax** Offers a clean, intuitive syntax inspired by Python, making it easy to learn and use.
+- **Code Efficiency** Allows developers to write concise, readable code, reducing boilerplate.
+- **Object Oriented** Supports object oriented programming (OOP) style.
+- **Performance** Delivers near-C/C++ performance, suitable for resource-intensive tasks.
 - **Static Typing** Enables safer code with fewer runtime errors, thanks to strong type-checking.
-
-```lotus
-def main() {
-    print("Hello World!")
-}
-```

@@ -1,11 +1,9 @@
 ### Assigning Values to Variables in lotus  
-
 *lotus* offers flexible ways to assign values to variables, including multiple assignments and unpacking.  
 
 ---
 
 ### Assigning Multiple Values to Multiple Variables  
-
 You can assign values to multiple variables in a single line  
 ```lotus
 x, y, z := "Orange", "Banana", "Cherry"
@@ -29,7 +27,6 @@ x = y = z = "Orange"  // Error Multiple assignments with a single value are not 
 ---
 
 ### Unpacking a Collection  
-
 *lotus* allows unpacking collections such as lists, tuples, etc., into individual variables.  
 
 **Example – Unpacking a List:**  

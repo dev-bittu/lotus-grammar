@@ -1,5 +1,4 @@
 ### Specifying a Variable Type in *lotus*
-
 In *lotus*, you can specify the type of a variable through **casting**. This allows you to convert values from one type to another. *lotus* uses constructor functions for casting, which work by converting one data type into another. This is especially useful when you want to ensure a variable has a specific type.
 
 ### Casting Constructor Functions

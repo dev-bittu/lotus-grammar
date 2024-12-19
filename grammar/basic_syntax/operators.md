@@ -37,7 +37,7 @@ Logical operators allow you to combine or negate conditions.
 | Operator      | Description            | Example         |
 |---------------|------------------------|-----------------|
 | `&&` or `and` | Logical AND            | `True && False` → `False` |
-| `||` or `or`  | Logical OR             | `True || False` → `True` |
+| `\|\|` or `or`  | Logical OR             | `True \|\| False` → `True` |
 | `!`  or `not` | Logical NOT            | `!True` → `False` |
 
 ---
@@ -56,25 +56,13 @@ Assignment operators are used to assign values to variables.
 
 ---
 
-### **Increment and Decrement Operators**
-The increment (`i++`) and decrement (`--i`) operators are used to add or subtract `1` from a variable.
-
-| Operator | Description            | Example        |
-|----------|------------------------|----------------|
-| `i++`    | Post-increment         | `i++` (value of `i` is increased by 1 after the expression) |
-| `++i`    | Pre-increment          | `++i` (value of `i` is increased by 1 before the expression) |
-
-*Note:* The increment and decrement operators are part of the *lotus* syntax for convenience and efficiency, similar to languages like C and Java.
-
----
-
 ### **Bitwise Operators**
 Bitwise operators perform operations on binary representations of integers.
 
 | Operator | Description            | Example         |
 |----------|------------------------|-----------------|
 | `&`      | Bitwise AND            | `5 & 3` → `1`   |
-| `|`      | Bitwise OR             | `5 | 3` → `7`   |
+| `\|`     | Bitwise OR             | `5 \| 3` → `7`  |
 | `^`      | Bitwise XOR            | `5 ^ 3` → `6`   |
 | `~`      | Bitwise NOT            | `~5` → `-6`     |
 | `<<`     | Left shift             | `5 << 1` → `10` |
@@ -125,11 +113,6 @@ print(True || False)  // True
 // Assignment Operators
 x := 10
 x += 5  // x = 15
-
-// Increment and Decrement Operators
-i := 10
-i++   // i = 11 (post-increment)
-++i   // i = 12 (pre-increment)
 
 // Bitwise Operators
 x := 5 & 3   // 1

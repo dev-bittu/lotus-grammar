@@ -39,7 +39,7 @@ myvar2 := "bittu"
 2myvar := "bittu"  // Cannot start with a number
 my-var := "bittu"  // Hyphen is not allowed
 my var := "bittu"  // Spaces are not allowed
-``
+```
 
 ---
 

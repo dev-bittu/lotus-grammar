@@ -1,5 +1,4 @@
 ### Variables and Data Types in lotus  
-
 *lotus* allows for flexible and type-safe variable declarations. It supports both explicit and implicit typing, along with various ways to declare and initialize variables.  
 
 ---
@@ -65,7 +64,7 @@ print(mychar)
 ### Casting  
 You can cast variables to a specific type  
 ```lotus
-x = str(3)    // Converts 3 to '3'
+x = str(3)    // Converts 3 to "3"
 y = i64(3)    // Converts 3 to an integer
 z = f32(3)  // Converts 3 to 3.0
 ```
@@ -77,8 +76,8 @@ Use the `type()` function to check a variable's type
 ```lotus
 x := 5
 y := "John"
-print(type(x))  // Outputs i64
-print(type(y))  // Outputs string
+print(type(x))  // Outputs: i64
+print(type(y))  // Outputs: str
 ```
 
 ---

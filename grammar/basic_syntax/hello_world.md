@@ -1,5 +1,4 @@
 ### Writing "Hello, World!" in lotus  
-
 The "Hello, World!" program is a simple way to demonstrate the basic syntax of *lotus*.  
 
 ### Example  

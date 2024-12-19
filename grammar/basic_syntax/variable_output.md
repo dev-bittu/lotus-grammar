@@ -69,10 +69,5 @@ print(x, y)  // Outputs 5 John
 
 ---
 
-### Summary  
-
-- Use commas to combine variables of different types in the `print()` function.  
-- Use the `+` operator for string concatenation or numerical addition.  
-- Avoid combining strings and numbers with `+` to prevent errors.  
-
-These methods allow versatile and error-free output handling in *lotus*.
+TODO: Show print func defination
+TODO: print vs println
