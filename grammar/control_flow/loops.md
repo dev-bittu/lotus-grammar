@@ -25,7 +25,6 @@ count := 0
 while count < 5 {
     print(count)
     count = count + 1
-    // OR count++
     // OR count += 1
 }
 ```
@@ -72,7 +71,7 @@ while count < 10 {
         break // Exits the loop when count is 5
     }
     print(count)
-    count := count + 1
+    count = count + 1
 }
 ```
 
@@ -186,7 +185,7 @@ person := {
     "age": 36,
     "city": "New York"
 }
-for key, value in person {
+for key, value in person.items() {
     print(key, value)
 }
 ```
