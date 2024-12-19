@@ -1,6 +1,6 @@
-### Functions in MyLang: Comprehensive Documentation (Updated)
+### Functions in Lotus: Comprehensive Documentation (Updated)
 
-Functions in MyLang are reusable blocks of code that perform specific tasks. They are defined using the `def` keyword and support various features like default arguments, recursion, variadic arguments, higher-order functions, pointers, references, and more.
+Functions in Lotus are reusable blocks of code that perform specific tasks. They are defined using the `def` keyword and support various features like default arguments, recursion, variadic arguments, higher-order functions, pointers, references, and more.
 
 ---
 
@@ -48,7 +48,7 @@ greet("Bittu")   // Output: Hello, Bittu!
 ---
 
 ## **Functions with Multiple Parameters**
-MyLang supports functions with multiple parameters.
+Lotus supports functions with multiple parameters.
 
 ### Example:
 ```lotus
@@ -88,7 +88,7 @@ print(divide(10.0, 2.0))  // Output: 5.0
 ---
 
 ## **Functions with Variadic Arguments**
-MyLang supports variadic arguments using `...`, allowing you to pass a variable number of arguments.
+Lotus supports variadic arguments using `...`, allowing you to pass a variable number of arguments.
 
 ### Example:
 ```lotus
@@ -105,7 +105,7 @@ print(sum(1, 2, 3, 4))  // Output: 10
 ---
 
 ## **Functions with Keyword Arguments**
-MyLang allows passing arguments as key-value pairs using dictionaries.
+Lotus allows passing arguments as key-value pairs using dictionaries.
 
 ### Example:
 ```lotus
@@ -173,7 +173,7 @@ print(factorial(5))  // Output: 120
 ---
 
 ## **Higher-Order Functions**
-MyLang allows functions to accept other functions as arguments or return them. When using higher-order functions, the `def` keyword is sufficient without specifying parameter or return types.
+Lotus allows functions to accept other functions as arguments or return them. When using higher-order functions, the `def` keyword is sufficient without specifying parameter or return types.
 
 ### Example:
 ```lotus
@@ -222,7 +222,7 @@ print(square(4))  // Output: 16
 ---
 
 ## **Function Overloading**
-MyLang supports function overloading, allowing multiple functions with the same name but different parameter types.
+Lotus supports function overloading, allowing multiple functions with the same name but different parameter types.
 
 ### Example:
 ```lotus

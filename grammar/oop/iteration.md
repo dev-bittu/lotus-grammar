@@ -1,6 +1,6 @@
-### **The `__iter__` and `__next__` Methods in MyLang**
+### **The `__iter__` and `__next__` Methods in Lotus**
 
-In MyLang, `__iter__` and `__next__` are special methods used to create iterable objects. An object is considered iterable if it implements the `__iter__` method, and the `__next__` method is used to iterate through the elements of that object.
+In Lotus, `__iter__` and `__next__` are special methods used to create iterable objects. An object is considered iterable if it implements the `__iter__` method, and the `__next__` method is used to iterate through the elements of that object.
 
 ---
 
@@ -127,4 +127,4 @@ Using `__iter__` and `__next__`, you can replicate generator-like behavior in cu
 4. **Integration**:
    - Fully compatible with `for` loops and manual iteration.
 
-By implementing these methods, your custom objects can seamlessly integrate with MyLang's iteration protocols, enabling efficient and reusable iteration.
+By implementing these methods, your custom objects can seamlessly integrate with Lotus's iteration protocols, enabling efficient and reusable iteration.

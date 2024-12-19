@@ -1,6 +1,6 @@
-### **Inheritance and Interfaces in MyLang**
+### **Inheritance and Interfaces in Lotus**
 
-Inheritance allows a class (child) to acquire properties and methods of another class (parent). Interfaces define a contract that classes must implement. MyLang supports:
+Inheritance allows a class (child) to acquire properties and methods of another class (parent). Interfaces define a contract that classes must implement. Lotus supports:
 
 - **Class inheritance** using the `extends` keyword.  
 - **Interface implementation** using the `impl` keyword.
@@ -106,7 +106,7 @@ print(dog.move())  // Output: Run
 ---
 
 ### **Combining Inheritance and Interfaces**
-MyLang allows a class to extend a base class and implement multiple interfaces simultaneously.
+Lotus allows a class to extend a base class and implement multiple interfaces simultaneously.
 
 #### **Example**
 ```lotus
@@ -151,7 +151,7 @@ print(car.getType()) // Output: Car
 
 ---
 
-### **Key Features of Inheritance and Interfaces in MyLang**
+### **Key Features of Inheritance and Interfaces in Lotus**
 1. **Class Inheritance (`extends`):**
    - Reuse methods and variables from parent classes.
    - Override methods in the child class.
@@ -166,4 +166,4 @@ print(car.getType()) // Output: Car
    - Classes define data and behavior.
    - Interfaces focus on behavior contracts.
 
-MyLang ensures flexibility and modularity by supporting both **inheritance** and **interfaces**, allowing developers to build scalable and maintainable code.
+Lotus ensures flexibility and modularity by supporting both **inheritance** and **interfaces**, allowing developers to build scalable and maintainable code.

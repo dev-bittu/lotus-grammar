@@ -1,6 +1,6 @@
-### **MyLang Classes Documentation**
+### **Lotus Classes Documentation**
 
-In MyLang, classes serve as templates for creating objects, encapsulating data (variables) and behaviors (methods). However, **functions cannot be defined within the body of the class itself**. Instead, all methods, including constructors (`__init__`) and destructors (`__dest__`), are declared outside the class body using a consistent syntax.
+In Lotus, classes serve as templates for creating objects, encapsulating data (variables) and behaviors (methods). However, **functions cannot be defined within the body of the class itself**. Instead, all methods, including constructors (`__init__`) and destructors (`__dest__`), are declared outside the class body using a consistent syntax.
 
 ---
 
@@ -183,4 +183,4 @@ def (mcls MyClass) greet(name str) {
 4. **Static Context:**  
    Shared variables and methods.
 
-MyLang’s class structure is designed to separate declaration and functionality, emphasizing clarity and modularity.
+Lotus’s class structure is designed to separate declaration and functionality, emphasizing clarity and modularity.

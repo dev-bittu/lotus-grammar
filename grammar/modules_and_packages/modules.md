@@ -1,13 +1,13 @@
-### **Modules in MyLang**
-Modules in MyLang provide a way to structure code into reusable components. They allow developers to organize their programs into packages and manage dependencies efficiently, akin to Node.js.
+### **Modules in Lotus**
+Modules in Lotus provide a way to structure code into reusable components. They allow developers to organize their programs into packages and manage dependencies efficiently, akin to Node.js.
 
 ---
 
 ### **Key Concepts**
 1. **Packages**: A package is a collection of related modules grouped together in a directory.  
-2. **Modules**: Individual files containing MyLang code, such as functions, classes, or constants.  
+2. **Modules**: Individual files containing Lotus code, such as functions, classes, or constants.  
 3. **Imports**: Bring functions, classes, or variables from one module into another.  
-4. **Dependency Management**: MyLang uses files like `package.json` and `package-lock.json` to manage dependencies and metadata.  
+4. **Dependency Management**: Lotus uses files like `package.json` and `package-lock.json` to manage dependencies and metadata.  
 5. **Standard Naming**: Modules should be organized in a clear directory structure to avoid conflicts.
 
 ---
@@ -87,7 +87,7 @@ Defines metadata and dependencies for the project.
 {
     "name": "lotustest",
     "version": "1.0.0",
-    "description": "A demo MyLang project",
+    "description": "A demo Lotus project",
     "main": "main.lt",
     "dependencies": {
         "some-dependency": "^1.0.0"
@@ -143,7 +143,7 @@ def main() {
 
 ---
 
-### **Features of MyLang Modules**
+### **Features of Lotus Modules**
 
 1. **Encapsulation**: Organize code into logical units.
 2. **Reusability**: Write once and use across multiple projects.
@@ -163,7 +163,7 @@ def main() {
 
 ---
 
-### **Benefits of Modules in MyLang**
+### **Benefits of Modules in Lotus**
 
 1. **Maintainability**: Modular code is easier to read and maintain.
 2. **Scalability**: Add new features or functionality without disrupting existing code.
@@ -172,4 +172,4 @@ def main() {
 
 ---
 
-This structured approach to modules in MyLang helps developers build robust, maintainable, and reusable software systems efficiently.
+This structured approach to modules in Lotus helps developers build robust, maintainable, and reusable software systems efficiently.

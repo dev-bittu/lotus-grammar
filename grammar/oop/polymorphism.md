@@ -1,6 +1,6 @@
-### **Polymorphism in MyLang**
+### **Polymorphism in Lotus**
 
-Polymorphism is one of the key principles of Object-Oriented Programming (OOP). In MyLang, **polymorphism** allows objects of different classes to be treated as objects of a common superclass. This enables writing flexible and reusable code that works with objects of different types in a uniform way.
+Polymorphism is one of the key principles of Object-Oriented Programming (OOP). In Lotus, **polymorphism** allows objects of different classes to be treated as objects of a common superclass. This enables writing flexible and reusable code that works with objects of different types in a uniform way.
 
 ---
 
@@ -18,7 +18,7 @@ Polymorphism is one of the key principles of Object-Oriented Programming (OOP). 
 
 ### **Method Overloading**
 
-MyLang supports **method overloading** by defining multiple versions of a function with the same name but different parameter counts or types.
+Lotus supports **method overloading** by defining multiple versions of a function with the same name but different parameter counts or types.
 
 #### **Example: Method Overloading**
 ```lotus
@@ -42,7 +42,7 @@ print(circle_area)  // Output: 176.625
 
 ### **Method Overriding**
 
-MyLang supports **method overriding** where a subclass can redefine methods from its parent class to provide a specialized behavior.
+Lotus supports **method overriding** where a subclass can redefine methods from its parent class to provide a specialized behavior.
 
 #### **Example: Method Overriding**
 ```lotus
@@ -80,7 +80,7 @@ for animal in animals {
 
 ### **Polymorphism with Interfaces**
 
-Polymorphism in MyLang also works through **interfaces**, where different classes implement the same interface but provide different behaviors.
+Polymorphism in Lotus also works through **interfaces**, where different classes implement the same interface but provide different behaviors.
 
 #### **Example: Polymorphism with Interfaces**
 ```lotus
@@ -153,4 +153,4 @@ DescribeAnimal(Cat())  // Output: Meow!
 ---
 
 ### **Conclusion**
-Polymorphism in MyLang allows for designing clean, efficient, and scalable code. By leveraging method overloading, overriding, and interface-based polymorphism, developers can create robust applications that are easy to maintain and extend.
+Polymorphism in Lotus allows for designing clean, efficient, and scalable code. By leveraging method overloading, overriding, and interface-based polymorphism, developers can create robust applications that are easy to maintain and extend.
