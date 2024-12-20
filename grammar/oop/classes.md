@@ -1,5 +1,4 @@
 ### **Lotus Classes Documentation**
-
 In Lotus, classes serve as templates for creating objects, encapsulating data (variables) and behaviors (methods). However, **functions cannot be defined within the body of the class itself**. Instead, all methods, including constructors (`__init__`) and destructors (`__dest__`), are declared outside the class body using a consistent syntax.
 
 ---
@@ -38,7 +37,7 @@ Declared outside the class body.
 ```lotus
 def (mcls &MyClass) __init__(name str) {
     mcls.name = name
-    mcls.count += 1  // or MyClass.count += 1
+    mcls.count += 1  // or MyClass.count += 1, because count is a static variable
 }
 ```
 
@@ -100,7 +99,7 @@ def (mcls MyClass) __add__(other MyClass) MyClass {
 1. **`__str__` Method:**  
 Returns a human-readable string. Called by `print(obj)`.  
 ```lotus
-def (mcls MyClass) __str__() string {
+def (mcls MyClass) __str__() str {
     return "MyClass(name=" + mcls.name + ")"
 }
 ```
@@ -134,10 +133,10 @@ def (mcls MyClass) greet(name str) {
 ### **Sample Class Implementation**
 ```lotus
 class MyClass {
-    let name string  // str default value: ""
-    let _protected_var string  // str default value: ""
-    let __private_var string  // str default value: ""
-    static count int  // int default value: 0
+    let name str            // str default value: ""
+    let _protected_var str  // str default value: ""
+    let __private_var str   // str default value: ""
+    static count int        // int default value: 0
 }
 
 // Constructor

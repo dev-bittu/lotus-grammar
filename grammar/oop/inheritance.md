@@ -1,5 +1,4 @@
 ### **Inheritance and Interfaces in Lotus**
-
 Inheritance allows a class (child) to acquire properties and methods of another class (parent). Interfaces define a contract that classes must implement. Lotus supports:
 
 - **Class inheritance** using the `extends` keyword.  
@@ -13,11 +12,11 @@ A class can inherit from another class to reuse its properties and methods. The 
 #### **Syntax**
 ```lotus
 class Parent {
-    let name string = "Parent"
+    let name str = "Parent"
 }
 
 class Child extends Parent {
-    let child_name string = "Child"
+    let child_name str = "Child"
 }
 ```
 
@@ -26,7 +25,7 @@ class Child extends Parent {
 #### **Example**
 ```lotus
 class Parent {
-    let name string = "Parent"
+    let name str = "Parent"
 
     def (p Parent) greet() {
         print("Hello from " + p.name)
@@ -34,7 +33,7 @@ class Parent {
 }
 
 class Child extends Parent {
-    let child_name string = "Child"
+    let child_name str = "Child"
 }
 
 // Child-specific method
@@ -71,7 +70,7 @@ interface Animal {
 }
 
 class Dog impl Animal {
-    let name string = "Dog"
+    let name str = "Dog"
 }
 ```
 
@@ -83,7 +82,7 @@ interface Animal {
 }
 
 class Dog impl Animal {
-    let name string = "Dog"
+    let name str = "Dog"
 }
 
 // Implementing interface methods
@@ -111,7 +110,7 @@ Lotus allows a class to extend a base class and implement multiple interfaces si
 #### **Example**
 ```lotus
 class Vehicle {
-    let type string = "Generic Vehicle"
+    let type str = "Generic Vehicle"
 }
 
 interface Fuel {
@@ -123,7 +122,7 @@ interface Electric {
 }
 
 class Car extends Vehicle impl Fuel, Electric {
-    let brand string = "Car Brand"
+    let brand str = "Car Brand"
 }
 
 // Implementing interface methods
