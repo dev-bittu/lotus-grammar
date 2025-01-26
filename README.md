@@ -26,6 +26,135 @@ Lotus is designed with both beginner users and advanced developers in mind. It i
 ## File Structure
 - `grammar/` - Directory containing detailed Lotus grammar definitions.
 
+## Learn in 5 minutes
+```lotus
+// Single-line comments start with double forward-slashes
+
+"""
+This can also work as a multiline comment.
+Or for unparsable, broken code
+"""
+
+# Variables
+let (
+    letter char = 'n'            # Declare with type annotation
+    lang = "N" + "im"            # Concatenation
+    nLength int = lang.length()  # Method for length
+    boat float                   # Declare without assignment
+    truth bool = false           # Boolean
+)
+
+# Immutable variables
+const (
+    legs int = 400             # Constants are immutable
+    arms int = 2_000           # Use underscores for readability
+    aboutPi float = 3.15
+)
+
+# Conditional Compilation
+when compileBadCode {
+    const debug bool = true
+    const input = stdin.readLine() # Compile-time if
+}
+
+# Data Structures
+
+# Tuples
+let child (str, int) = ("Rudiger", 2)
+let today (str, float) = ("Sunny", 25.3)
+
+# Sequences
+let drinks = ["Water", "Juice", "Chocolate"]
+drinks.add("Milk")
+
+if "Milk" in drinks {
+    print("We have Milk and ", drinks.length - 1, " other drinks")
+}
+
+let myDrink = drinks[2]
+
+# class
+class Person {
+    let name str
+    let salary i32
+
+    fn __init__(name: str, salary: i32) {
+        this.name = name
+        this.salary = salary
+    }
+}
+
+# Enumerations
+enum Color { 
+    Red,
+    Blue,
+    Green 
+}
+enum Direction { 
+    North,
+    West,
+    East,
+    South 
+}
+
+let orient Direction = Direction.North
+let pixel Color = Color.Green
+
+# Iteration
+for i, elem in ["Yes", "No", "Maybe so"] {
+    print(elem, " is at index: ", i)
+}
+
+for k, v in [("You", 100), ("Me", 9000)] {
+    print(v)
+}
+
+let myString = """
+an <example>
+`string` to
+play with
+"""
+
+for line in myString.split("\n") {
+    print(line)
+}
+
+# Procedures
+enum Answer { 
+    Yes, 
+    No 
+}
+
+fn ask(question str) Answer {
+    print(question, " (y/n)")
+    while true {
+        let response = stdin.readLine()
+        if response in ["y", "Y", "yes", "Yes"] {
+            return Answer.Yes
+        } else if response in ["n", "N", "no", "No"] {
+            return Answer.No
+        } else {
+            print("Please be clear: yes or no")
+        }
+    }
+}
+
+fn addSugar(amount int = 2) {
+    assert(amount > 0 and amount < 9000, "Crazy Sugar")
+    for a in 1..amount {
+        print(a, " sugar...")
+    }
+}
+
+match ask("Would you like sugar in your tea?") {
+    case Answer.Yes:
+        addSugar(3)
+    case Answer.No:
+        print("Oh do take a little!")
+        addSugar()
+}
+```
+
 ## Contributing
 We welcome contributions to enhance Lotus's grammar! Here’s how you can help:
 1. **Fork the Repository**
