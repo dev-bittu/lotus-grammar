@@ -172,7 +172,7 @@ In Lotus, comments are used to add notes or explanations to your code. There are
 1. **Single-line comments**: Use `//` to comment out a single line.  
 ```lotus
 // This is a single-line comment
-let x int = 5 // This variable stores the value 5
+let x i32 = 5 // This variable stores the value 5
 ```
 2. **Multi-line comments**: Use `/*` and `*/` to comment out multiple lines.  
 ```lotus
@@ -257,7 +257,7 @@ Lotus supports **explicit type casting** to ensure safe and intentional type con
 
 1. **Casting between numeric types**:
 ```lotus
-   let x int = 10
+   let x i32 = 10
    let y = f32(x) // Casts integer to f32
 ```
 
@@ -271,7 +271,7 @@ Convert numbers or other types to strings using `str()`.
 3. **Invalid casts throw errors**:  
 Lotus ensures type safety and will throw runtime errors for invalid casts.  
 ```lotus
-   let value int = i32("text") // error: Invalid cast
+   let value i32 = i32("text") // error: Invalid cast
 ```
 
 ---
@@ -647,7 +647,7 @@ print(coordinates[0]) // Outputs: 10
 
 **Returning Multiple Values**:  
 ```lotus
-fn getInfo() -> tuple {
+fn getInfo()tuple {
     return "Alice", 30
 }
 let (name, age) = getInfo()
@@ -727,7 +727,7 @@ The non-null assertion operator forces access to a nullable variable and throws 
 
 **Syntax**:  
 ```lotus
-let length int = name!!.length
+let length i32 = name!!.length
 ```
 
 **Example**:  
@@ -883,7 +883,7 @@ You can propagate errors using explicit returns, ensuring they are handled at th
 
 **Example**:  
 ```lotus
-fn readFile(fileName str) -> (str, Error) {
+fn readFile(fileName str)(str, Error) {
     if fileName == "" {
         return ("", Error.New("File name cannot be empty"))
     }
@@ -1045,7 +1045,7 @@ fn apply(op fn, a i32, b i32) i32 {
     return op(a, b)
 }
 
-fn multiply(x i32, y i32) -> i32 {
+fn multiply(x i32, y i32) i32 {
     return x * y
 }
 
@@ -1147,7 +1147,7 @@ class Circle impl Drawable {
 class Square impl Drawable {
     let side i32
 
-    fn new(side i32) -> Square {
+    fn new(side i32) Square {
         let obj = Square()
         obj.side = side
         return obj
@@ -1252,7 +1252,7 @@ Interfaces can also be used with generics to define type constraints.
 **Example**:  
 ```lotus
 interface Comparable<T> {
-    fn compareTo(other T) -> i32
+    fn compareTo(other T) i32
 }
 
 class Number impl Comparable<Number> {
@@ -1428,13 +1428,13 @@ If you need functionality from multiple sources, consider using **interfaces**. 
 **Example**:  
 ```lotus
 class A {
-    fn methodA() -> void {
+    fn methodA() void {
         print("Method A")
     }
 }
 
 class B(A) {
-    fn methodB() -> void {
+    fn methodB() void {
         print("Method B")
     }
 }
@@ -1446,11 +1446,11 @@ class C(A, B) {} // Error: A class can only extend one class
 To combine functionality:  
 ```lotus
 interface X {
-    fn methodX() -> void
+    fn methodX() void
 }
 
 interface Y {
-    fn methodY() -> void
+    fn methodY() void
 }
 
 class Z impl X, Y {
@@ -1555,11 +1555,11 @@ An abstract class cannot be instantiated directly and is intended to be extended
 **Example**:  
 ```lotus
 abs class Animal {
-    fn makeSound() -> void
+    fn makeSound() void
 }
 
 class Cat(Animal) {
-    fn makeSound() -> void {
+    fn makeSound() void {
         print("Meow")
     }
 }
