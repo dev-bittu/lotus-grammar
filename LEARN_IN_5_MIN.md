@@ -939,3 +939,170 @@ To handle a `panic`, use `recover` in a controlled block (e.g., to clean up reso
 
 ---
 
+
+#### **Function Basics**
+Functions in Lotus are defined using the `fn` keyword.
+
+**Syntax**:  
+```lotus
+fn functionName(param1 type, param2 type) returnType {
+    // Function body
+    return value
+}
+```
+
+**Example**:  
+```lotus
+fn add(a int, b int) i32 {
+    return a + b
+}
+print(add(5, 3)) // Outputs: 8
+```
+
+---
+
+#### **Parameters with Default Values**
+Functions can have parameters with default values, making them optional during the function call.
+
+**Syntax**:  
+```lotus
+fn greet(name str = "Guest") str {
+    return f"Hello, {name}!"
+}
+```
+
+**Example**:  
+```lotus
+print(greet())           // Outputs: Hello, Guest!
+print(greet("Alice"))    // Outputs: Hello, Alice!
+```
+
+---
+
+#### **Generics**
+Generics allow functions to operate on different types without specifying them explicitly.
+
+**Syntax**:  
+```lotus
+fn identity<T>(value T) T {
+    return value
+}
+```
+
+**Example**:  
+```lotus
+print(identity<i32>(42))        // Outputs: 42
+print(identity(34))             // Outputs: 34
+
+print(identity<str>("Lotus"))   // Outputs: Lotus
+print(identity("Hello"))        // Outputs: Hello
+```
+
+---
+
+#### **Variadic Arguments**
+Variadic arguments enable a function to accept an arbitrary number of arguments of a specific type.
+
+**Syntax**:  
+```lotus
+fn sumAll(numbers ...i32) i32 {
+    let total = 0
+    for num in numbers {
+        total += num
+    }
+    return total
+}
+```
+
+**Example**:  
+```lotus
+print(sumAll(1, 2, 3, 4, 5)) // Outputs: 15
+```
+
+---
+
+#### **5. Keyword Arguments**
+Functions can be called using keyword arguments to improve readability and flexibility.
+
+**Example**:  
+```lotus
+fn createUser(name str, age int, role str = "User") str {
+    return f"Name: {name}, Age: {age}, Role: {role}"
+}
+
+print(createUser(name="Alice", age=25))            // Outputs: Name: Alice, Age: 25, Role: User
+print(createUser(name="Bob", age=30, role="Admin")) // Outputs: Name: Bob, Age: 30, Role: Admin
+```
+
+---
+
+#### **Higher-Order Functions**
+Higher-order functions are functions that take other functions as arguments or return functions.
+
+**Example**:  
+```lotus
+fn apply(op fn, a i32, b i32) i32 {
+    return op(a, b)
+}
+
+fn multiply(x i32, y i32) -> i32 {
+    return x * y
+}
+
+print(apply(multiply, 5, 3)) // Outputs: 15
+```
+
+---
+
+#### **7. Keyword Arguments and Variadic Arguments Together**
+Keyword and variadic arguments can be used in the same function.
+
+**Example**:  
+```lotus
+fn logMessage(level str = "INFO", messages ...str) {
+    for message in messages {
+        print(f"[{level}] {message}")
+    }
+}
+
+logMessage(messages: "Starting process", "Process completed")
+// Outputs:
+// [INFO] Starting process
+// [INFO] Process completed
+```
+
+---
+
+#### **Decorators**
+Decorators in Lotus allow you to modify or enhance the behavior of functions by wrapping them.
+
+**Syntax**:  
+```lotus
+@decorator
+fn functionName(params...) {
+    // Function body
+}
+```
+
+**Example**:  
+```lotus
+fn logExecution(func fn) fn {
+    return fn() str {
+        print("Function is being executed")
+        return func()
+    }
+}
+
+@logExecution
+fn greet() str {
+    return "Hello, Lotus!"
+}
+
+print(greet())
+// Outputs:
+// Function is being executed
+// Hello, Lotus!
+```
+
+---
+
