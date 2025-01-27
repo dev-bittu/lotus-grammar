@@ -1,3 +1,44 @@
+# Table of Contents
+1. **What is Lotus?**  
+2. **Key Applications**  
+3. **What Can Lotus Do?**  
+4. **Why Choose Lotus?**  
+---
+### Keywords and Operators
+5. **Keywords**  
+6. **Operators in Lotus**  
+   - **Arithmetic Operators**  
+   - **Comparison Operators**  
+   - **Logical Operators**  
+   - **Assignment Operators**  
+   - **Bitwise Operators**  
+   - **Membership Operators**  
+   - **Identity Operators**  
+---
+### Lotus Language Quick Guide
+7. **Comments**  
+8. **Variable Declaration**  
+9. **Operators**  
+10. **Type Casting**  
+11. **Variable Names**  
+---
+### Control Flow
+12. **Conditional Statements**  
+---
+### Data Types and Structures
+13. **Array**  
+14. **Null Safety**  
+---
+### Error Handling and Functions
+15. **Error Handling**  
+16. **Functions**  
+---
+### Object-Oriented Programming in Lotus
+17. **Defining Interface**  
+18. **Classes**  
+19. **Inheritance**
+
+
 ### What is lotus?  
 *lotus* is a statically typed, compiled programming language designed by Bittu. It combines the simplicity of Python with the performance of C/C++ and is set to be released in the future.  
 
@@ -29,6 +70,7 @@
 - **Static Typing** Enables safer code with fewer runtime errors, thanks to strong type-checking, and null safety.
 
 
+### Keywords
 Here's a table explaining the usage of each keyword in your language, **Lotus**, along with examples:
 
 | **Keyword**      | **Description**                                                                                   | **Example**                                                                                  |
@@ -166,7 +208,7 @@ Identity operators are used to check if two variables point to the same object i
 
 ---
 
-### **Lotus Language Quick Guide
+### Lotus Language Quick Guide
 #### **Comments**
 In Lotus, comments are used to add notes or explanations to your code. There are two types of comments:  
 1. **Single-line comments**: Use `//` to comment out a single line.  
@@ -244,10 +286,6 @@ Use `??` to provide a default value for nullable variables.
 ```lotus
    let displayName = username ?? "Guest"
 ```
-
----
-
-### **Lotus Language Quick Guide: Type Casting, Variable Assignment, Variable Declaration, and Variable Names**
 
 ---
 
