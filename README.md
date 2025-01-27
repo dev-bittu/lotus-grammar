@@ -24,7 +24,7 @@ Lotus is designed with both beginner users and advanced developers in mind. It i
 
 
 ## File Structure
-- `grammar/` - Directory containing detailed Lotus grammar definitions.
+- [LEARN_IN_5_MIN.md](LEARN_IN_5_MIN.md) - Learn lotus lang in 5 min
 
 ## Learn in 5 minutes
 ```lotus
