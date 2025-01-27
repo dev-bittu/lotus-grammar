@@ -438,11 +438,11 @@ The `switch` statement is used to evaluate a variable against multiple cases.
 **Syntax**:  
 ```lotus
 switch variable {
-    case value1 -> {
-        // Code for case value1
+    value1 -> {
+        // Code for value1
     }
-    case value2 -> {
-        // Code for case value2
+    value2 -> {
+        // Code for value2
     }
     default -> {
         // Code if no cases match
@@ -454,9 +454,9 @@ Example:
 ```lotus
 let day = 3
 switch day {
-    case 1 -> print("Monday")
-    case 2 -> print("Tuesday")
-    case 3 -> print("Wednesday")
+    1 -> print("Monday")
+    2 -> print("Tuesday")
+    3 -> print("Wednesday")
     default -> print("Invalid day")
 }
 ```
@@ -470,17 +470,219 @@ Example:
 ```lotus
 let grade = "B"
 switch grade {
-    case "A" -> print("Excellent")
-    case "B" -> {
+    "A" -> print("Excellent")
+    "B" -> {
         print("Good")
         fallthrough
     }
-    case "C" -> print("Average")
+    "C" -> print("Average")
     default -> print("Poor")
 }
 // Outputs:
 // Good
 // Average
+```
+
+---
+
+#### **Array**
+Arrays in Lotus are dynamic by default but can be restricted using generics for type safety.  
+- **Dynamic Arrays**: Can store values of any type and grow as needed.  
+- **Restricted Arrays**: Use generics to enforce type constraints.  
+
+**Syntax**:  
+```lotus
+let dynamicArray = [1, "two", true] // Dynamic array
+let intArray = array<i32>(1, 2, 3)     // Restricted to integers
+```
+
+**Accessing Elements**:  
+```lotus
+let nums = [10, 20, 30]
+print(nums[0]) // Outputs: 10
+```
+
+**Modifying Arrays**:  
+```lotus
+var arr = ["apple", "banana"]
+arr.append("cherry") // Adds an element
+arr.remove(0)        // Removes the first element
+```
+
+---
+
+#### **2. Boolean**
+The `bool` type represents `true` or `false`.  
+Certain values evaluate to `false`:  
+- `0`, `None`, `""` (empty string), `[]` (empty array), `()` (empty tuple), `{}` (empty dictionary).  
+
+**Examples**:  
+```lotus
+let isActive bool = true
+if isActive {
+    print("It's active!")
+}
+
+print(bool([])) // Outputs: false
+print(bool(42)) // Outputs: true
+```
+
+---
+
+#### **3. Constants**
+Constants are immutable and are typically declared at the global scope for clarity.  
+
+**Syntax**:  
+```lotus
+const PI = 3.14
+const MAX_USERS i32 = 100
+```
+
+Constants cannot be reassigned:  
+```lotus
+PI = 3.1415 // Error: Cannot modify a constant
+```
+
+---
+
+#### **4. Dictionary (`dict`)**
+Dictionaries in Lotus store key-value pairs, allowing fast lookup.  
+Keys must be unique, and values can be of any type.
+
+**Syntax**:  
+```lotus
+let user dict = {
+    "name": "Alice",
+    "age": 30
+}
+```
+
+**Accessing Values**:  
+```lotus
+print(user["name"]) // Outputs: Alice
+```
+
+**Adding/Updating Entries**:  
+```lotus
+user["email"] = "alice@example.com"
+```
+
+**Removing Entries**:  
+```lotus
+user.remove("age")
+```
+
+---
+
+#### **5. Integer (`i32`)**
+The `i32` type represents whole numbers. It supports all standard arithmetic operations.  
+
+**Examples**:  
+```lotus
+let a = 10
+let b i32 = 20
+result := a + b
+```
+
+---
+
+#### **6. Set**
+Sets in Lotus store unique, unordered elements.  
+
+**Syntax**:  
+```lotus
+let fruits = {"apple", "banana", "cherry"}
+```
+
+**Adding/Removing Elements**:  
+```lotus
+fruits.add("orange")
+fruits.remove("banana")
+```
+
+**Operations**:  
+```lotus
+let setA = {1, 2, 3}
+let setB = {3, 4, 5}
+print(setA.union(setB))       // Outputs: {1, 2, 3, 4, 5}
+print(setA.intersection(setB)) // Outputs: {3}
+```
+
+---
+
+#### **7. String (`str`)**
+The `str` type represents a sequence of characters.  
+
+**Creating Strings**:  
+```lotus
+let greeting str = "Hello, Lotus!"
+```
+
+**String Interpolation**:  
+```lotus
+let name = "Alice"
+print(f"Hello, {name}!") // Outputs: Hello, Alice!
+```
+
+**String Methods**:  
+```lotus
+text := "lotus"
+print(text.upper()) // Outputs: LOTUS
+```
+
+---
+
+#### **8. Tuple**
+Tuples are immutable, ordered collections of values, often used to return multiple values from a function.
+
+**Syntax**:  
+```lotus
+let coordinates = (10, 20)
+```
+
+**Accessing Values**:  
+```lotus
+print(coordinates[0]) // Outputs: 10
+```
+
+**Returning Multiple Values**:  
+```lotus
+fn getInfo() -> tuple {
+    return "Alice", 30
+}
+let (name, age) = getInfo()
+```
+
+---
+
+#### **9. Byte**
+The `byte` type is used to represent raw binary data.
+
+**Creating a Byte Array**:  
+```lotus
+let data byte = b"Lotus"
+```
+
+**Accessing Byte Data**:  
+```lotus
+print(data[0]) // Outputs: ASCII value of 'L'
+```
+
+---
+
+#### **10. Range**
+The `range` type generates sequences of numbers, often used in loops.
+
+**Syntax**:  
+```lotus
+let r = range(1, 10) // Generates numbers from 1 to 9
+```
+
+**Using in Loops**:  
+```lotus
+for i in r {
+    print(i) // Outputs: 0, 1, 2, 3, 4
+}
 ```
 
 ---
