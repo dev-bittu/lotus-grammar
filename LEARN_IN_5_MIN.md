@@ -1297,3 +1297,275 @@ v.drive() // Outputs: Driving a car
 ```
 
 ---
+
+### **Classes**
+A class in Lotus is defined using the `class` keyword. Classes group related data (fields) and behavior (methods) together.
+
+**Syntax**:  
+```lotus
+class ClassName {
+    // Fields (Variables)
+    // Methods
+}
+```
+
+**Example**:  
+```lotus
+class Person {
+    let name str
+    let age i32
+
+    fn new(name str, age i32) Person {
+        let obj = Person()
+        obj.name = name
+        obj.age = age
+        return obj
+    }
+
+    fn greet() {
+        print(f"Hello, my name is {self.name} and I am {self.age} years old.")
+    }
+}
+
+let p = Person.new("Alice", 30)
+p.greet() // Outputs: Hello, my name is Alice and I am 30 years old.
+```
+
+---
+
+### **2. Access Modifiers**
+Lotus supports access control for fields and methods using the `public` and `private` keywords.
+
+- **Public**: Accessible from outside the class (default behavior).  
+- **Private**: Accessible only within the class (priv keyword).
+- **Protected**: Accessible only within the module (prot keyword).
+
+**Example**:  
+```lotus
+class BankAccount {
+    priv let (
+        balance f32
+        lean f64
+    )
+    prot let (
+        ...
+    )
+
+    fn new(initialBalance f32) BankAccount {
+        let obj = BankAccount()
+        obj.balance = initialBalance
+        return obj
+    }
+
+    fn deposit(amount f32) void {
+        self.balance += amount
+    }
+
+    fn getBalance() f32 {
+        return self.balance
+    }
+}
+
+let account = BankAccount.new(100.0)
+account.deposit(50.0)
+print(account.getBalance()) // Outputs: 150.0
+```
+
+---
+
+### **3. Method Declaration**
+Methods are functions defined within a class. They can access the class's fields and other methods using the `this` keyword.
+
+**Example**:  
+```lotus
+class Calculator {
+    fn add(a i32, b i32) i32 {
+        return a + b
+    }
+
+    fn multiply(a i32, b i32) i32 {
+        return a * b
+    }
+}
+
+let calc = Calculator()
+print(calc.add(5, 3))       // Outputs: 8
+print(calc.multiply(4, 6))  // Outputs: 24
+```
+
+---
+
+### **4. Inheritance**
+A class can inherit from another class to reuse its fields and methods.
+
+
+**Example**:  
+```lotus
+class Animal {
+    fn speak() {
+        print("Some generic animal sound")
+    }
+}
+
+class Dog(Animal) {
+    fn speak() {
+        print("Woof Woof!")
+    }
+}
+
+let d = Dog()
+d.speak() // Outputs: Woof Woof!
+```
+
+### **Note on Inheritance in Lotus**
+
+In Lotus, a class can only extend **one** other class at a time. This is because Lotus follows a single inheritance model, ensuring simplicity and avoiding the complexities of multiple inheritance (such as the diamond problem).
+
+If you need functionality from multiple sources, consider using **interfaces**. A class in Lotus can implement multiple interfaces, allowing you to achieve a similar effect as multiple inheritance without its drawbacks.
+
+---
+
+**Example**:  
+```lotus
+class A {
+    fn methodA() -> void {
+        print("Method A")
+    }
+}
+
+class B(A) {
+    fn methodB() -> void {
+        print("Method B")
+    }
+}
+
+// Not Allowed
+class C(A, B) {} // Error: A class can only extend one class
+```
+
+To combine functionality:  
+```lotus
+interface X {
+    fn methodX() -> void
+}
+
+interface Y {
+    fn methodY() -> void
+}
+
+class Z impl X, Y {
+    fn methodX() {
+        print("Method X")
+    }
+
+    fn methodY() {
+        print("Method Y")
+    }
+}
+```
+
+---
+
+### **Method Overriding**
+A subclass can override a method from its parent class. Use `super.methodName()` to call the parent class's implementation.
+
+**Example**:  
+```lotus
+class Vehicle {
+    fn describe() {
+        print("This is a vehicle.")
+    }
+}
+
+class Car(Vehicle) {
+    fn describe() {
+        super.describe()
+        print("Specifically, this is a car.")
+    }
+}
+
+let c = Car()
+c.describe()
+// Outputs:
+// This is a vehicle.
+// Specifically, this is a car.
+```
+
+---
+
+### **6. Interfaces and Implementation**
+Lotus allows a class to implement one or more interfaces. This is done using the `impl` keyword.
+
+**Example**:  
+```lotus
+interface Shape {
+    fn area() f32
+}
+
+class Circle impl Shape {
+    let radius f32
+
+    fn new(radius f32) Circle {
+        let obj = Circle()
+        obj.radius = radius
+        return obj
+    }
+
+    fn area() f32 {
+        return 3.14 * self.radius * self.radius
+    }
+}
+
+let circle = Circle.new(5.0)
+print(circle.area()) // Outputs: 78.5
+```
+
+---
+
+### **7. Constructor**
+The `__init__` method in a class serves as its constructor. It initializes the class's fields and returns an instance of the class.
+
+**Example**:  
+```lotus
+class Rectangle {
+    let width f32
+    let height f32
+
+    fn __init__(width f32, height f32) Rectangle {
+        let obj = Rectangle()
+        obj.width = width
+        obj.height = height
+        return obj
+    }
+
+    fn area() f32 {
+        return self.width * self.height
+    }
+}
+
+let rect = Rectangle.new(4.0, 5.0)
+print(rect.area()) // Outputs: 20.0
+```
+
+---
+
+### **Abstract Classes**
+An abstract class cannot be instantiated directly and is intended to be extended by other classes. It can define methods that must be implemented by subclasses.
+
+**Example**:  
+```lotus
+abs class Animal {
+    fn makeSound() -> void
+}
+
+class Cat(Animal) {
+    fn makeSound() -> void {
+        print("Meow")
+    }
+}
+
+let cat = Cat()
+cat.makeSound() // Outputs: Meow
+```
+
+---
