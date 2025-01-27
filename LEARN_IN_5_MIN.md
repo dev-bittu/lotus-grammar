@@ -687,3 +687,127 @@ for i in r {
 
 ---
 
+#### **Nullable Types (`?`)**
+A variable can be declared as nullable by appending `?` to its type.
+
+**Syntax**:  
+```lotus
+let name str? = null // `name` can hold a string or `null`
+```
+
+**Example**:  
+```lotus
+let age int? = 25
+age = null // Valid because `age` is nullable
+```
+
+---
+
+#### **2. Safe Access (`?.`)**
+The safe access operator is used to call properties or methods on nullable objects. If the object is `null`, the expression evaluates to `null` without throwing an error.
+
+**Syntax**:  
+```lotus
+let length int? = name?.length
+```
+
+**Example**:  
+```lotus
+let name str? = "Alice"
+print(name?.length) // Outputs: 5
+
+let nullName str? = null
+print(nullName?.length) // Outputs: null
+```
+
+---
+
+#### **3. Non-Null Assertion (`!!`)**
+The non-null assertion operator forces access to a nullable variable and throws a runtime error if the variable is `null`.
+
+**Syntax**:  
+```lotus
+let length int = name!!.length
+```
+
+**Example**:  
+```lotus
+let name str? = "Alice"
+print(name!!.length) // Outputs: 5
+
+let nullName str? = null
+print(nullName!!.length) // Throws a runtime error
+```
+
+---
+
+#### **4. Elvis Operator (`??`)**
+The Elvis operator provides a default value when a nullable expression evaluates to `null`.
+
+**Example**:  
+```lotus
+let name str? = null
+let displayName = name ?? "Anonymous"
+print(displayName) // Outputs: Anonymous
+
+let anotherName str? = "Lotus"
+let anotherDisplayName = anotherName ?? "Anonymous"
+print(anotherDisplayName) // Outputs: Lotus
+```
+
+---
+
+#### **5. Combining Null Safety Features**
+Null safety features can be combined to create concise and safe code.
+
+**Example**:  
+```lotus
+let name str? = null
+
+// Safe access with a fallback value
+let length = name?.length ?? 0
+print(length) // Outputs: 0
+
+// Non-null assertion for a known non-null value
+let knownName str? = "Lotus"
+print(knownName!!.length) // Outputs: 5
+```
+
+---
+
+#### **6. Null Checking**
+You can check for `null` explicitly using an `if` statement to ensure safe usage of nullable variables.
+
+**Example**:  
+```lotus
+let name str? = null
+
+if name != null {
+    print(name!!.length) // Safe to use as `name` is not null
+} else {
+    print("Name is null")
+}
+```
+
+---
+
+#### **7. Declaring Nullable and Non-Nullable Variables**
+- **Nullable Variable**: `let variable type? = value`
+- **Non-Nullable Variable**: `let variable type = value`
+
+**Example**:  
+```lotus
+let nullableName str? = null
+let nonNullableName str = "Lotus" // Cannot hold null
+```
+
+### **Summary of Null Safety Operators**
+| Operator | Description                                                                 |
+|----------|-----------------------------------------------------------------------------|
+| `?`      | Declares a nullable type.                                                  |
+| `?.`     | Safe access operator to call properties/methods if the object is not null. |
+| `!!`     | Non-null assertion operator; throws an error if the value is null.         |
+| `??`     | Elvis operator to provide a default value when the object is null.         |
+
+---
+
