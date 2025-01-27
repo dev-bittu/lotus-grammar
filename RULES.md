@@ -2,11 +2,11 @@ here are some rules you have to follow:
 - in func defination you have to put curly bracket with definition like golang nor like c++.
 example:
 ```lotus
-def main() {  // allowed
+fn main() {  // allowed
     println("Hello World!")
 }
 
-def main()
+fn main()
 {  // not allowed
     println("Hello World!")
 }
