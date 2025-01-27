@@ -39,10 +39,11 @@
 19. **Inheritance**
 
 
-### What is lotus?  
+# What is lotus?  
 *lotus* is a statically typed, compiled programming language designed by Bittu. It combines the simplicity of Python with the performance of C/C++ and is set to be released in the future.  
 
-### Key Applications  
+
+# Key Applications  
 *lotus* is versatile and can be used for  
 - **Web Development** Build robust server-side applications.  
 - **Software Development** Create efficient, scalable software.  
@@ -51,7 +52,7 @@
 - **Machine Learning and AI** Develop ML models and AI-driven applications.  
 - **Embedded Systems** Write performant code for hardware devices.  
 
-### What can *lotus* do?  
+# What can *lotus* do?  
 *lotus* is designed to handle a wide range of programming tasks  
 - **Web Applications** Develop web servers and backend systems.  
 - **Workflow Integration** Build tools and scripts that integrate seamlessly with other software.  
@@ -60,7 +61,7 @@
 - **Big Data and Complex Math** Process and analyze massive datasets.  
 - **Prototyping and Production** Quickly prototype ideas and deploy production-ready applications.  
 
-### Why Choose lotus?  
+# Why Choose lotus?  
 *lotus* stands out with these features  
 - **Cross-Platform Support** Works seamlessly across Windows, Mac, Linux, Raspberry Pi, and more.
 - **Simple Syntax** Offers a clean, intuitive syntax inspired by Python, making it easy to learn and use.
@@ -70,7 +71,7 @@
 - **Static Typing** Enables safer code with fewer runtime errors, thanks to strong type-checking, and null safety.
 
 
-### Keywords
+# Keywords
 Here's a table explaining the usage of each keyword in your language, **Lotus**, along with examples:
 
 | **Keyword**      | **Description**                                                                                   | **Example**                                                                                  |
@@ -116,7 +117,7 @@ Here's a table explaining the usage of each keyword in your language, **Lotus**,
 | `import`, `as`   | Imports modules with optional aliasing.                                                           | `import math as m; let result = m.sqrt(16)`                                               |
 
 
-### **Operators in *lotus***
+# **Operators in *lotus***
 Operators are essential components in any programming language, used to perform operations on variables and values. *lotus* supports a wide range of operators, including the ones found in Python, with a few additional ones for optimized programming. Below is a breakdown of the different types of operators available in *lotus*.
 
 ---
@@ -208,7 +209,7 @@ Identity operators are used to check if two variables point to the same object i
 
 ---
 
-### Lotus Language Quick Guide
+# Lotus Language Quick Guide
 #### **Comments**
 In Lotus, comments are used to add notes or explanations to your code. There are two types of comments:  
 1. **Single-line comments**: Use `//` to comment out a single line.  
@@ -230,20 +231,20 @@ let x i32 = 5 // This variable stores the value 5
 Lotus provides a flexible and intuitive syntax for declaring variables. It supports both type inference and explicit type annotations.  
 1. **Declaring variables with type inference**:  
 ```lotus
-    let age = 25 // Lotus infers the type as int
+let age = 25 // Lotus infers the type as int
 ```
 2. **Declaring variables with explicit types**:  
 ```lotus
-    let name str = "Lotus" // Explicitly declares a string variable
+let name str = "Lotus" // Explicitly declares a string variable
 ```
 3. **Declaring variables using walrus operator**:  
 ```lotus
-    name := "Lotus"
+name := "Lotus"
 ```
 1. **Declaring nullable variables**:  
 Use `?` after the type to indicate a variable can be null.  
 ```lotus
-    let username str? = null // Nullable string
+let username str? = null // Nullable string
 ```
 
 ---
@@ -254,37 +255,37 @@ Lotus supports a wide range of operators for various operations:
 1. **Arithmetic Operators**:  
 `+`, `-`, `*`, `/`, `%`  
 ```lotus
-    let sum = 5 + 3
-    let product = 4 * 2
+let sum = 5 + 3
+let product = 4 * 2
 ```
 
 2. **Comparison Operators**:  
 `==`, `!=`, `<`, `>`, `<=`, `>=`  
 ```lotus
-    if x == y {
-        print("x is equal to y")
-    }
+if x == y {
+    print("x is equal to y")
+}
 ```
 
 3. **Logical Operators**:  
 `&&`, `||`, `!`  
 ```lotus
-    if isAdmin && isLoggedIn {
-        print("Access granted")
-    }
+if isAdmin && isLoggedIn {
+    print("Access granted")
+}
 ```
 
 4. **Assignment Operators**:  
 `=`, `+=`, `-=`, `*=`, `/=`, `%=`  
 ```lotus
-    var score = 10
-    score += 5 // Equivalent to score = score + 5
+let score = 10
+score += 5 // Equivalent to score = score + 5
 ```
 
 5. **Null-coalescing Operator**:  
 Use `??` to provide a default value for nullable variables.  
 ```lotus
-   let displayName = username ?? "Guest"
+let displayName = username ?? "Guest"
 ```
 
 ---
