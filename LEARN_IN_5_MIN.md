@@ -811,3 +811,131 @@ let nonNullableName str = "Lotus" // Cannot hold null
 
 ---
 
+#### **Error Basics**
+Errors in Lotus are values of the `Error` type. They can be created, returned, and handled like any other value.  
+
+**Declaring a Function that Returns an Error**:  
+```lotus
+fn divide(a int, b int) (int, error) {
+    if b == 0 {
+        return (0, error.New("Division by zero"))
+    }
+    return (a / b, null)
+}
+```
+
+**Handling Errors**:  
+```lotus
+let (result, err) = divide(10, 0)
+if err != null {
+    print(err.message) // Outputs: Division by zero
+} else {
+    print(result)
+}
+```
+
+---
+
+#### **2. Creating New Errors**
+Errors can be created using the `Error.New` method.
+
+**Example**:  
+```lotus
+let err = error.New("Something went wrong")
+print(err.message) // Outputs: Something went wrong
+```
+
+---
+
+#### **3. Custom Errors (Extending the `error` Class)**
+For more detailed or domain-specific errors, you can create custom error types by extending the `error` class.
+
+**Defining a Custom Error**:  
+```lotus
+class ValidationError extends error {
+    ...
+}
+```
+
+**Using a Custom Error**:  
+```lotus
+fn validateAge(age int) error? {
+    if age < 18 {
+        return ValidationError.new("age", "Age must be at least 18")
+    }
+    return null
+}
+
+let err = validateAge(16)
+if err != null {
+    if err is ValidationError {
+        print(err.details()) // Outputs: Validation failed on field 'age': Age must be at least 18
+    } else {
+        print(err.message)
+    }
+}
+```
+
+---
+
+#### **4. Error Propagation**
+You can propagate errors using explicit returns, ensuring they are handled at the appropriate level.
+
+**Example**:  
+```lotus
+fn readFile(fileName str) -> (str, Error) {
+    if fileName == "" {
+        return ("", Error.New("File name cannot be empty"))
+    }
+    return ("File content", null)
+}
+
+fn processFile(fileName str) Error? {
+    let (content, err) = readFile(fileName)
+    if err != null {
+        return err // Propagate the error
+    }
+    print(content)
+    return null
+}
+
+let err = processFile("")
+if err != null {
+    print(err.message) // Outputs: File name cannot be empty
+}
+```
+
+---
+
+#### **5. Error Unwrapping**
+Errors in Lotus can be wrapped to provide additional context. You can unwrap them to retrieve the original error.
+
+**Example**:  
+```lotus
+let baseError = error.New("Base error")
+let wrappedError = error.Wrap(baseError, "Additional context")
+
+print(wrappedError.message) // Outputs: Additional context: Base error
+print(wrappedError.message) // Outputs: Base error
+```
+
+---
+
+#### **6. Panic and Recovery**
+For critical errors that should terminate execution, you can use `panic`. However, `panic` is discouraged in favor of proper error handling.
+
+**Example**:  
+```lotus
+fn riskyOperation() {
+    panic("Critical failure!") // Terminates the program
+}
+
+fn main() {
+    riskyOperation() // Program will terminate
+}
+```
+
+To handle a `panic`, use `recover` in a controlled block (e.g., to clean up resources).  
+
+---
+
