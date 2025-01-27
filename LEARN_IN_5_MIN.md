@@ -1106,3 +1106,194 @@ print(greet())
 
 ---
 
+### **Defining Interfaces**
+An interface is declared using the `interface` keyword. It contains method signatures that a type must implement to conform to the interface.
+
+**Syntax**:  
+```lotus
+interface Name {
+    fn methodName(param1 type, param2 type) returnType
+}
+```
+
+**Example**:  
+```lotus
+interface Drawable {
+    fn draw() void
+}
+```
+
+---
+
+### **Implementing Interfaces**
+A type implements an interface by defining all the methods declared in the interface.
+
+**Example**:  
+```lotus
+class Circle impl Drawable {
+    let radius int
+
+    fn new(radius i32) Circle {
+        let obj = Circle()
+        obj.radius = radius
+        return obj
+    }
+
+    fn draw() {
+        print("Drawing a circle with radius {self.radius}")
+    }
+}
+
+class Square impl Drawable {
+    let side i32
+
+    fn new(side i32) -> Square {
+        let obj = Square()
+        obj.side = side
+        return obj
+    }
+
+    fn draw() {
+        print("Drawing a square with side {self.side}")
+    }
+}
+```
+
+---
+
+### **Using Interfaces**
+You can declare a variable of an interface type and assign any object that implements the interface to it.
+
+**Example**:  
+```lotus
+fn render(drawable Drawable) {
+    drawable.draw()
+}
+
+let c = Circle.new(5)
+let s = Square.new(3)
+
+render(c) // Outputs: Drawing a circle with radius 5
+render(s) // Outputs: Drawing a square with side 3
+```
+
+---
+
+### **Checking Interface Conformance**
+Use the `is` operator to check if a type implements a specific interface.
+
+**Example**:  
+```lotus
+if c is Drawable {
+    print("c implements Drawable")
+}
+```
+
+---
+
+### **Combining Interfaces**
+Lotus allows a type to implement multiple interfaces.
+
+**Example**:  
+```lotus
+interface Movable {
+    fn moveTo(x int, y int) void
+}
+
+class Shape impl Drawable, Movable {
+    fn draw() {
+        print("Drawing a shape")
+    }
+
+    fn moveTo(x i32, y i32) {
+        print(f"Moving to ({x}, {y})")
+    }
+}
+
+let shape = Shape()
+shape.draw()           // Outputs: Drawing a shape
+shape.moveTo(10, 20)   // Outputs: Moving to (10, 20)
+```
+
+---
+
+### **6. Interface Composition**
+Interfaces can be composed by embedding other interfaces.
+
+**Example**:  
+```lotus
+interface Transformable {
+    fn rotate(angle f32) void
+    fn scale(factor f32) void
+}
+
+interface AdvancedDrawable extends Drawable, Transformable {}
+
+class ComplexShape implements AdvancedDrawable {
+    fn draw() {
+        print("Drawing a complex shape")
+    }
+
+    fn rotate(angle f32) {
+        print(f"Rotating by {angle} degrees")
+    }
+
+    fn scale(factor f32) {
+        print(f"Scaling by a factor of {factor}")
+    }
+}
+```
+
+---
+
+### **7. Generic Interfaces**
+Interfaces can also be used with generics to define type constraints.
+
+**Example**:  
+```lotus
+interface Comparable<T> {
+    fn compareTo(other T) -> i32
+}
+
+class Number impl Comparable<Number> {
+    let value i32
+
+    fn new(value i32) Number {
+        let obj = Number()
+        obj.value = value
+        return obj
+    }
+
+    fn compareTo(other Number) i32 {
+        return self.value - other.value
+    }
+}
+
+let n1 = Number.new(10)
+let n2 = Number.new(20)
+
+print(n1.compareTo(n2)) // Outputs: -10
+```
+
+---
+
+### **Abstract Methods in Interfaces**
+If a method is declared but not implemented in an interface, the implementing class must define it.
+
+**Example**:  
+```lotus
+interface Vehicle {
+    fn drive() void
+}
+
+class Car impl Vehicle {
+    fn drive() void {
+        print("Driving a car")
+    }
+}
+
+let v = Car()
+v.drive() // Outputs: Driving a car
+```
+
+---
