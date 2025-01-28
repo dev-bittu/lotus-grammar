@@ -97,7 +97,7 @@ Here's a table explaining the usage of each keyword in your language, **Lotus**,
 | `default`        | Default branch in `switch` when no case matches.                                                  | `switch x { case 1: ... default: ... }`                                                    |
 | `fallthrough`    | Allows case to fall through to the next one in `switch`.                                          | `case 1: ... fallthrough case 2: ...`                                                     |
 | `and`, `or`, `not`| Logical operators for combining or negating conditions.                                           | `if x > 0 and y > 0 { ... }`                                                               |
-| `is`             | Checks type or identity.                                                                          | `if x is int { ... }`                                                                      |
+| `is`             | Checks type or identity.                                                                          | `if x is i32{ ... }`                                                                      |
 | `for`, `while`   | Iterative control structures.                                                                     | `for i in range(0, 10) { ... } while count > 0 { ... }`                                    |
 | `break`          | Exits a loop.                                                                                     | `if x > 5 { break }`                                                                       |
 | `continue`       | Skips to the next iteration of the loop.                                                          | `if x % 2 == 0 { continue }`                                                               |
@@ -217,7 +217,7 @@ In Lotus, comments are used to add notes or explanations to your code. There are
 // This is a single-line comment
 let x i32 = 5 // This variable stores the value 5
 ```
-2. **Multi-line comments**: Use `/*` and `*/` to comment out multiple lines.  
+1. **Multi-line comments**: Use `"""` and `"""` to comment out multiple lines.  
 ```lotus
 """
    This is a multi-line comment.
@@ -231,7 +231,7 @@ let x i32 = 5 // This variable stores the value 5
 Lotus provides a flexible and intuitive syntax for declaring variables. It supports both type inference and explicit type annotations.  
 1. **Declaring variables with type inference**:  
 ```lotus
-let age = 25 // Lotus infers the type as int
+let age = 25 // Lotus infers the type as i32
 ```
 2. **Declaring variables with explicit types**:  
 ```lotus
@@ -241,7 +241,7 @@ let name str = "Lotus" // Explicitly declares a string variable
 ```lotus
 name := "Lotus"
 ```
-1. **Declaring nullable variables**:  
+4. **Declaring nullable variables**:  
 Use `?` after the type to indicate a variable can be null.  
 ```lotus
 let username str? = null // Nullable string
@@ -736,7 +736,7 @@ let name str? = null // `name` can hold a string or `null`
 
 **Example**:  
 ```lotus
-let age int? = 25
+let age i32? = 25
 age = null // Valid because `age` is nullable
 ```
 
@@ -747,7 +747,7 @@ The safe access operator is used to call properties or methods on nullable objec
 
 **Syntax**:  
 ```lotus
-let length int? = name?.length
+let length i32? = name?.length
 ```
 
 **Example**:  
@@ -855,7 +855,7 @@ Errors in Lotus are values of the `Error` type. They can be created, returned, a
 
 **Declaring a Function that Returns an Error**:  
 ```lotus
-fn divide(a int, b int) (int, error) {
+fn divide(a i32, b i32) (int, error) {
     if b == 0 {
         return (0, error.New("Division by zero"))
     }
@@ -876,7 +876,7 @@ if err != null {
 ---
 
 #### **2. Creating New Errors**
-Errors can be created using the `Error.New` method.
+Errors can be created using the `error.New` method.
 
 **Example**:  
 ```lotus
@@ -891,14 +891,14 @@ For more detailed or domain-specific errors, you can create custom error types b
 
 **Defining a Custom Error**:  
 ```lotus
-class ValidationError extends error {
+class ValidationError(error) {
     ...
 }
 ```
 
 **Using a Custom Error**:  
 ```lotus
-fn validateAge(age int) error? {
+fn validateAge(age i32) error? {
     if age < 18 {
         return ValidationError.new("age", "Age must be at least 18")
     }
@@ -924,7 +924,7 @@ You can propagate errors using explicit returns, ensuring they are handled at th
 ```lotus
 fn readFile(fileName str)(str, Error) {
     if fileName == "" {
-        return ("", Error.New("File name cannot be empty"))
+        return ("", error.New("File name cannot be empty"))
     }
     return ("File content", null)
 }
@@ -992,7 +992,7 @@ fn functionName(param1 type, param2 type) returnType {
 
 **Example**:  
 ```lotus
-fn add(a int, b int) i32 {
+fn add(a i32, b i32) i32 {
     return a + b
 }
 print(add(5, 3)) // Outputs: 8
@@ -1065,7 +1065,7 @@ Functions can be called using keyword arguments to improve readability and flexi
 
 **Example**:  
 ```lotus
-fn createUser(name str, age int, role str = "User") str {
+fn createUser(name str, age i32, role str = "User") str {
     return f"Name: {name}, Age: {age}, Role: {role}"
 }
 
@@ -1170,7 +1170,7 @@ A type implements an interface by defining all the methods declared in the inter
 **Example**:  
 ```lotus
 class Circle impl Drawable {
-    let radius int
+    let radius i32
 
     fn new(radius i32) Circle {
         let obj = Circle()
@@ -1236,7 +1236,7 @@ Lotus allows a type to implement multiple interfaces.
 **Example**:  
 ```lotus
 interface Movable {
-    fn moveTo(x int, y int) void
+    fn moveTo(x i32, y i32) void
 }
 
 class Shape impl Drawable, Movable {
@@ -1373,7 +1373,6 @@ p.greet() // Outputs: Hello, my name is Alice and I am 30 years old.
 ---
 
 ### **2. Access Modifiers**
-Lotus supports access control for fields and methods using the `public` and `private` keywords.
 
 - **Public**: Accessible from outside the class (default behavior).  
 - **Private**: Accessible only within the class (priv keyword).
